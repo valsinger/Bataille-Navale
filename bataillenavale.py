@@ -4,9 +4,10 @@ def ocean(l):
         
     return ""
 
-l=11*["o"]
+l = 11 * ["~"]
+
 for i in range(len(l)):
-    l[i]=11*["o"]
+    l[i]=11*["~"]
     
 
 l[0][0] = " "
@@ -32,9 +33,45 @@ l[8][0] = "H"
 l[9][0] = "I"
 l[10][0] = "J"
 
+def porteAvion(x, y, direction):
+    if x > 10 or x < 1:
+        return False
+    elif y > 10 or y < 1:
+        return False
+    elif direction < 1 or direction > 4:
+        return False
+    elif direction == 1:
+        if x < 5:
+            return False
+        else:
+            for i in range (5):
+                l[x][y] = "■"
+                x -= 1
+    elif direction == 2:
+        if y > 5:
+            return False
+        else:
+            for i in range(5):
+                l[x][y] = "■"
+                y += 1
+    elif direction == 3:
+        if x > 5:
+            return False
+        else:
+            for i in range(5):
+                l[x][y] = "■"
+    elif direction == 4:
+        if y < 5:
+            return False
+        else:
+            for i in range(5):
+                l[x][y] = "■"
+                y -= 1
+    return ""
 
+porteAvion(6, 5, 2)
 
-print("")
+print (" ")
 print(ocean(l))
 
 
@@ -45,14 +82,3 @@ print(ocean(l))
 #~~~~
 
 #https://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U2460
-
-x=int(input("ligne(entre 0 et 9):"))
-y=int(input("colonne(entre 0 et 9):"))
-
-print(l[x][y])
-
-l[x][y]="0"
-
-
-
-print(ocean(l))
