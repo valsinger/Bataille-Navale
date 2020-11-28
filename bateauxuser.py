@@ -1,3 +1,5 @@
+from coords import *
+
 def torpilleur(x, y, direction):
     if x > 10 or x < 1:
         return False
