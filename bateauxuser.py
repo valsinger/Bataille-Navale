@@ -1,5 +1,6 @@
 from coords import *
 
+# placement du Torpilleur par l'utilisateur avec restrictions ------------------
 def torpilleur(x, y, direction):
     if x > 10 or x < 1:
         return False
@@ -37,7 +38,7 @@ def torpilleur(x, y, direction):
                 y += -1
     return ""
 
-
+# placement du Sous-marin par l'utilisateur avec restrictions ------------------
 def sousmarin(x, y, direction):
     if l[x][y] == "■":
         return False
@@ -77,7 +78,7 @@ def sousmarin(x, y, direction):
                 y += -1
     return ""
 
-
+# placement du Contretorpilleur par l'utilisateur avec restrictions ------------
 def contretorpilleur(x, y, direction):
     if l[x][y] == "■":
         return False
@@ -117,7 +118,7 @@ def contretorpilleur(x, y, direction):
                 y += -1
     return ""
 
-
+# placement du croiseur par l'utilisateur avec restrictions --------------------
 def croiseur(x, y, direction):
     if l[x][y] == "■":
         return False
@@ -157,7 +158,7 @@ def croiseur(x, y, direction):
                 y += -1
     return ""
 
-
+# placement du Porte avion par l'utilisateur avec restrictions -----------------
 def porteavions(x, y, direction):
     if l[x][y] == "■":
         return False

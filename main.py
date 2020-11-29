@@ -1,3 +1,6 @@
+# Programme de Bataille Navale créé par Valentin Singer et Aurélien
+
+#imports de tous les scripts
 from ocean import *
 from bateaux import *
 from coords import *
