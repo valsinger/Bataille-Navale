@@ -2,9 +2,12 @@
 
 #imports de tous les scripts
 from ocean import *
-from bateaux import *
+from placement import *
 from coords import *
+from bot import *
 
-porteavions(5, 5, 2)
+porteavionsUser(5, 5, 2)
 print(oceanUser(l))
+print(oceanBot(m))
+placerbot()
 print(oceanBot(m))
