@@ -1,13 +1,7 @@
-# Programme de Bataille Navale créé par Valentin Singer et Aurélien
+# Programme de Bataille Navale créé par Valentin Singer et Aurélien Dumay
 
-#imports de tous les scripts
-from ocean import *
-from placement import *
+#import de tous les scripts ----------------------------------------------------
+from tab import *
 from coords import *
+from boats import *
 from bot import *
-
-porteavionsUser(5, 5, 2)
-print(oceanUser(l))
-print(oceanBot(m))
-placerbot()
-print(oceanBot(m))

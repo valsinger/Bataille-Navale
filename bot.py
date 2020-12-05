@@ -1,45 +1,32 @@
 from random import randint
-from placement import *
+from boats import *
 
-# placement --------------------------------------------------------------------
-def placerbot():
-    a = randint(1, 10)
-    b = randint(1, 10)
-    c = randint(1, 4)
-    while torpilleurBot(a, b, c) == False:
-        a = randint(1, 10)
-        b = randint(1, 10)
-        c = randint(1, 4)
-        torpilleurBot(a, b, c)
-    a = randint(1, 10)
-    b = randint(1, 10)
-    c = randint(1, 4)
-    while sousmarinBot(a, b, c) == False:
-        a = randint(1, 10)
-        b = randint(1, 10)
-        c = randint(1, 4)
-        sousmarinBot(a, b, c)
-    a = randint(1, 10)
-    b = randint(1, 10)
-    c = randint(1, 4)
-    while contretorpilleurBot(a, b, c) == False:
-        a = randint(1, 10)
-        b = randint(1, 10)
-        c = randint(1, 4)
-        contretorpilleurBot(a, b, c)
-    a = randint(1, 10)
-    b = randint(1, 10)
-    c = randint(1, 4)
-    while croiseurBot(a, b, c) == False:
-        a = randint(1, 10)
-        b = randint(1, 10)
-        c = randint(1, 4)
-        croiseurBot(a, b, c)
-    a = randint(1, 10)
-    b = randint(1, 10)
-    c = randint(1, 4)
-    while porteavionsBot(a, b, c) == False:
-        a = randint(1, 10)
-        b = randint(1, 10)
-        c = randint(1, 4)
-        porteavionsBot(a, b, c)
+def BoatsBot():
+    x = randint(1, 10)
+    y = randint(1, 10)
+    z = randint(1, 4)
+    while torpilleurBot.setPlace(torpilleurBot, x, y, z) != True:
+        x = randint(1, 10)
+        y = randint(1, 10)
+        z = randint(1, 4)
+    torpilleurBot.setPlace(torpilleurBot, x, y, z)
+    while sousmarinBot.setPlace(sousmarinBot, x, y, z) != True:
+        x = randint(1, 10)
+        y = randint(1, 10)
+        z = randint(1, 4)
+    torpilleurBot.setPlace(sousmarinBot, x, y, z)
+    while contretorpilleurBot.setPlace(contretorpilleurBot, x, y, z) != True:
+        x = randint(1, 10)
+        y = randint(1, 10)
+        z = randint(1, 4)
+    contretorpilleurBot.setPlace(contretorpilleurBot, x, y, z)
+    while croiseurBot.setPlace(croiseurBot, x, y, z) != True:
+        x = randint(1, 10)
+        y = randint(1, 10)
+        z = randint(1, 4)
+    croiseurBot.setPlace(croiseurBot, x, y, z)
+    while porteavionsBot.setPlace(porteavionsBot, x, y, z) != True:
+        x = randint(1, 10)
+        y = randint(1, 10)
+        z = randint(1, 4)
+    porteavionsBot.setPlace(porteavionsBot, x, y, z)

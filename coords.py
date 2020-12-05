@@ -1,4 +1,8 @@
-# init ocean oceanUser ---------------------------------------------------------
+from tab import *
+from boats import *
+# Modifications des tableaux (principalement graphiques) - faciliter la lecture
+
+# init coords tab --------------------------------------------------------------
 l = 11 * ["~"]
 for i in range(len(l)):
     l[i] = 11 * ["~"]
@@ -26,7 +30,7 @@ l[8][0] = "H"
 l[9][0] = "I"
 l[10][0] = "J"
 
-# init ocean oceanBot ----------------------------------------------------------
+# init coords tabBot -----------------------------------------------------------
 m = 11 * ["~"]
 for i in range(len(m)):
     m[i] = 11 * ["~"]
@@ -54,7 +58,7 @@ m[8][0] = "H"
 m[9][0] = "I"
 m[10][0] = "J"
 
-# init ocean oceanBotForUser----------------------------------------------------
+# init coords tabBotForUser ----------------------------------------------------
 p = 11 * ["~"]
 for i in range(len(p)):
     p[i] = 11 * ["~"]
