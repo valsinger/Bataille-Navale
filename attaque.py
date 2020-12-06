@@ -8,7 +8,7 @@ def attaqueUser(x,y):
         if torpilleurBot.pv!=0:
             torpilleurBot.setPv(torpilleurBot.getPV-20)
         else:
-            torpilleurBot.coulé()
+            torpilleurBot.coule()
             print("coulé")
         torpilleurBot.setPv(torpilleurBot.getPV-20)
 
@@ -22,7 +22,7 @@ def attaqueUser(x,y):
         if sousmarinBot.pv!=0:
             sousmarinBot.setPv(sousmarinBot.getPV-20)
         else:
-            sousmarinBot.coulé()
+            sousmarinBot.coule()
             print("coulé")
         sousmarinBot.setPv(sousmarinBot.getPV-20)
 
@@ -36,7 +36,7 @@ def attaqueUser(x,y):
         if contretorpilleurBot.pv!=0:
             contretorpilleurBot.setPv(contretorpilleurBot.getPV-20)
         else:
-            contretorpilleurBot.coulé()
+            contretorpilleurBot.coule()
             print("coulé")
         m[x][y] = "x"
 
@@ -48,7 +48,7 @@ def attaqueUser(x,y):
         if croiseurBot.pv!=0:
             croiseurBot.setPv(croiseurBot.getPV-20)
         else:
-            croiseurBot.coulé()
+            croiseurBot.coule()
             print("coulé")
         croiseurBot.setPv(croieurBot.getPV-20)
 
@@ -62,7 +62,7 @@ def attaqueUser(x,y):
         if porteavionsBot.pv!=0:
             porteavionsBot.setPv(porteavionsBot.getPV-20)
         else:
-            porteavionsBot.coulé()
+            porteavionsBot.coule()
             print("coulé")
         porteavionsBot.setPv(porteavionsBot.getPV-20)
 
