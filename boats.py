@@ -49,7 +49,7 @@ class torpilleurUser:
                     l[x][y] = "▤"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
 
 
@@ -101,7 +101,7 @@ class sousmarinUser:
                     l[x][y] = "▥"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
 
 class contretorpilleurUser:
@@ -152,7 +152,7 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
 
 class croiseurUser:
@@ -203,7 +203,7 @@ class croiseurUser:
                     l[x][y] = "▧"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
 
 class porteavionsUser:
@@ -254,7 +254,7 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
 
 
@@ -305,7 +305,7 @@ class torpilleurBot:
                     m[x][y] = "▤"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
 
 class sousmarinBot:
@@ -356,7 +356,7 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
 
 class contretorpilleurBot:
@@ -407,7 +407,7 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
 
 class croiseurBot:
@@ -458,7 +458,7 @@ class croiseurBot:
                     m[x][y] = "▧"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
 
 class porteavionsBot:
@@ -509,5 +509,5 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     y += -1
         return ""
-    if self._pv < 20:
+    def coule(self):
         self._coule = True
