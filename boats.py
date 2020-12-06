@@ -24,35 +24,31 @@ class torpilleurUser:
                 return False
             else:
                 for i in range(2):
-                    l[x][y] = "■"
+                    l[x][y] = "▤"
                     x += -1
         elif direction == 2:
             if y >= 9:
                 return False
             else:
                 for i in range(2):
-                    l[x][y] = "■"
+                    l[x][y] = "▤"
                     y += 1
         elif direction == 3:
             if x >= 9:
                 return False
             else:
                 for i in range(2):
-                    l[x][y] = "■"
+                    l[x][y] = "▤"
                     x += 1
         elif direction == 4:
             if y < 2:
                 return False
             else:
                 for i in range(2):
-                    l[x][y] = "■"
+                    l[x][y] = "▤"
                     y += -1
         return ""
-    
-    
-        
-    
-    
+
 class sousmarinUser:
     def __init__(self, pv, place):
         self._pv = 60
@@ -64,7 +60,7 @@ class sousmarinUser:
     def getPlace(self):
         return self._place
     def setPlace(self, x, y, direction):
-        if l[x][y] == "■":
+        if l[x][y] == "▥":
             return False
         elif x > 10 or x < 1:
             return False
@@ -77,31 +73,31 @@ class sousmarinUser:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "■"
+                    l[x][y] = "▥"
                     x += -1
         elif direction == 2:
             if y >= 8:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "■"
+                    l[x][y] = "▥"
                     y += 1
         elif direction == 3:
             if x >= 8:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "■"
+                    l[x][y] = "▥"
                     x += 1
         elif direction == 4:
             if y < 3:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "■"
+                    l[x][y] = "▥"
                     y += -1
         return ""
-    
+
 class contretorpilleurUser:
     def __init__(self, pv, place):
         self._pv = 60
@@ -113,7 +109,7 @@ class contretorpilleurUser:
     def getPlace(self):
         return self._place
     def setPlace(self, x, y, direction):
-        if l[x][y] == "■":
+        if l[x][y] == "▦":
             return False
         elif x > 10 or x < 1:
             return False
@@ -126,28 +122,28 @@ class contretorpilleurUser:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "■"
+                    l[x][y] = "▦"
                     x += -1
         elif direction == 2:
             if y >= 8:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "■"
+                    l[x][y] = "▦"
                     y += 1
         elif direction == 3:
             if x >= 8:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "■"
+                    l[x][y] = "▦"
                     x += 1
         elif direction == 4:
             if y < 3:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "■"
+                    l[x][y] = "▦"
                     y += -1
         return ""
 
@@ -162,7 +158,7 @@ class croiseurUser:
     def getPlace(self):
         return self._place
     def setPlace(self, x, y, direction):
-        if l[x][y] == "■":
+        if l[x][y] == "▧":
             return False
         elif x > 10 or x < 1:
             return False
@@ -175,28 +171,28 @@ class croiseurUser:
                 return False
             else:
                 for i in range(4):
-                    l[x][y] = "■"
+                    l[x][y] = "▧"
                     x += -1
         elif direction == 2:
             if y >= 7:
                 return False
             else:
                 for i in range(4):
-                    l[x][y] = "■"
+                    l[x][y] = "▧"
                     y += 1
         elif direction == 3:
             if x >= 7:
                 return False
             else:
                 for i in range(4):
-                    l[x][y] = "■"
+                    l[x][y] = "▧"
                     x += 1
         elif direction == 4:
             if y < 4:
                 return False
             else:
                 for i in range(4):
-                    l[x][y] = "■"
+                    l[x][y] = "▧"
                     y += -1
         return ""
 
@@ -211,7 +207,7 @@ class porteavionsUser:
     def getPlace(self):
         return self._place
     def setPlace(self, x, y, direction):
-        if l[x][y] == "■":
+        if l[x][y] == "▨":
             return False
         elif x > 10 or x < 1:
             return False
@@ -224,28 +220,28 @@ class porteavionsUser:
                 return False
             else:
                 for i in range(5):
-                    l[x][y] = "■"
+                    l[x][y] = "▨"
                     x += -1
         elif direction == 2:
             if y >= 6:
                 return False
             else:
                 for i in range(5):
-                    l[x][y] = "■"
+                    l[x][y] = "▨"
                     y += 1
         elif direction == 3:
             if x >= 6:
                 return False
             else:
                 for i in range(5):
-                    l[x][y] = "■"
+                    l[x][y] = "▨"
                     x += 1
         elif direction == 4:
             if y < 5:
                 return False
             else:
                 for i in range(5):
-                    l[x][y] = "■"
+                    l[x][y] = "▨"
                     y += -1
         return ""
 
@@ -273,28 +269,28 @@ class torpilleurBot:
                 return False
             else:
                 for i in range(2):
-                    m[x][y] = "■"
+                    m[x][y] = "▤"
                     x += -1
         elif direction == 2:
             if y >= 9:
                 return False
             else:
                 for i in range(2):
-                    m[x][y] = "■"
+                    m[x][y] = "▤"
                     y += 1
         elif direction == 3:
             if x >= 9:
                 return False
             else:
                 for i in range(2):
-                    m[x][y] = "■"
+                    m[x][y] = "▤"
                     x += 1
         elif direction == 4:
             if y < 2:
                 return False
             else:
                 for i in range(2):
-                    m[x][y] = "■"
+                    m[x][y] = "▤"
                     y += -1
         return ""
 
@@ -309,7 +305,7 @@ class sousmarinBot:
     def getPlace(self):
         return self._place
     def setPlace(self, x, y, direction):
-        if m[x][y] == "■":
+        if m[x][y] == "▥":
             return False
         elif x > 10 or x < 1:
             return False
@@ -322,28 +318,28 @@ class sousmarinBot:
                 return False
             else:
                 for i in range(3):
-                    m[x][y] = "■"
+                    m[x][y] = "▥"
                     x += -1
         elif direction == 2:
             if y >= 8:
                 return False
             else:
                 for i in range(3):
-                    m[x][y] = "■"
+                    m[x][y] = "▥"
                     y += 1
         elif direction == 3:
             if x >= 8:
                 return False
             else:
                 for i in range(3):
-                    m[x][y] = "■"
+                    m[x][y] = "▥"
                     x += 1
         elif direction == 4:
             if y < 3:
                 return False
             else:
                 for i in range(3):
-                    m[x][y] = "■"
+                    m[x][y] = "▥"
                     y += -1
         return ""
 
@@ -358,7 +354,7 @@ class contretorpilleurBot:
     def getPlace(self):
         return self._place
     def setPlace(self, x, y, direction):
-        if m[x][y] == "■":
+        if m[x][y] == "▦":
             return False
         elif x > 10 or x < 1:
             return False
@@ -371,28 +367,28 @@ class contretorpilleurBot:
                 return False
             else:
                 for i in range(3):
-                    m[x][y] = "■"
+                    m[x][y] = "▦"
                     x += -1
         elif direction == 2:
             if y >= 8:
                 return False
             else:
                 for i in range(3):
-                    m[x][y] = "■"
+                    m[x][y] = "▦"
                     y += 1
         elif direction == 3:
             if x >= 8:
                 return False
             else:
                 for i in range(3):
-                    m[x][y] = "■"
+                    m[x][y] = "▦"
                     x += 1
         elif direction == 4:
             if y < 3:
                 return False
             else:
                 for i in range(3):
-                    m[x][y] = "■"
+                    m[x][y] = "▦"
                     y += -1
         return ""
 
@@ -407,7 +403,7 @@ class croiseurBot:
     def getPlace(self):
         return self._place
     def setPlace(self, x, y, direction):
-        if m[x][y] == "■":
+        if m[x][y] == "▧":
             return False
         elif x > 10 or x < 1:
             return False
@@ -420,28 +416,28 @@ class croiseurBot:
                 return False
             else:
                 for i in range(4):
-                    m[x][y] = "■"
+                    m[x][y] = "▧"
                     x += -1
         elif direction == 2:
             if y >= 7:
                 return False
             else:
                 for i in range(4):
-                    m[x][y] = "■"
+                    m[x][y] = "▧"
                     y += 1
         elif direction == 3:
             if x >= 7:
                 return False
             else:
                 for i in range(4):
-                    m[x][y] = "■"
+                    m[x][y] = "▧"
                     x += 1
         elif direction == 4:
             if y < 4:
                 return False
             else:
                 for i in range(4):
-                    m[x][y] = "■"
+                    m[x][y] = "▧"
                     y += -1
         return ""
 
@@ -456,7 +452,7 @@ class porteavionsBot:
     def getPlace(self):
         return self._place
     def setPlace(self, x, y, direction):
-        if m[x][y] == "■":
+        if m[x][y] == "▨":
             return False
         elif x > 10 or x < 1:
             return False
@@ -469,27 +465,27 @@ class porteavionsBot:
                 return False
             else:
                 for i in range(5):
-                    m[x][y] = "■"
+                    m[x][y] = "▨"
                     x += -1
         elif direction == 2:
             if y >= 6:
                 return False
             else:
                 for i in range(5):
-                    m[x][y] = "■"
+                    m[x][y] = "▨"
                     y += 1
         elif direction == 3:
             if x >= 6:
                 return False
             else:
                 for i in range(5):
-                    m[x][y] = "■"
+                    m[x][y] = "▨"
                     x += 1
         elif direction == 4:
             if y < 5:
                 return False
             else:
                 for i in range(5):
-                    m[x][y] = "■"
+                    m[x][y] = "▨"
                     y += -1
         return ""
