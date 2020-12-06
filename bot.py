@@ -1,3 +1,4 @@
+from coords import *
 from random import randint
 from boats import *
 

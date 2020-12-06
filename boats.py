@@ -1,5 +1,5 @@
 from coords import *
-
+from tab import *
 
 # Bateaux user -----------------------------------------------------------------
 class torpilleurUser:
@@ -48,7 +48,11 @@ class torpilleurUser:
                     l[x][y] = "■"
                     y += -1
         return ""
-
+    
+    
+        
+    
+    
 class sousmarinUser:
     def __init__(self, pv, place):
         self._pv = 60
@@ -97,7 +101,7 @@ class sousmarinUser:
                     l[x][y] = "■"
                     y += -1
         return ""
-
+    
 class contretorpilleurUser:
     def __init__(self, pv, place):
         self._pv = 60
@@ -198,7 +202,7 @@ class croiseurUser:
 
 class porteavionsUser:
     def __init__(self, pv, place):
-        self._pv = 80
+        self._pv = 100
         self._place = []
     def getPv(self):
         return self._pv
@@ -443,7 +447,7 @@ class croiseurBot:
 
 class porteavionsBot:
     def __init__(self, pv, place):
-        self._pv = 80
+        self._pv = 100
         self._place = []
     def getPv(self):
         return self._pv
