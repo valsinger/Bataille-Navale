@@ -10,20 +10,20 @@ def randomCoordinate():
     return x, y, direction
 
 def BoatsBot():
-    x, y, z = randomCoordinate()
+    x, y, direction = randomCoordinate()
     while torpilleurBot.setPlace(x, y, direction) != True:
-        x, y, z = randomCoordinate()
+        x, y, direction = randomCoordinate()
         torpilleurBot.setPlace(x, y, direction)
     while sousmarinBot.setPlace(x, y, direction) != True:
-        x, y, z = randomCoordinate()
+        x, y, direction = randomCoordinate()
         torpilleurBot.setPlace(x, y, direction)
     while contretorpilleurBot.setPlace(x, y, direction) != True:
-        x, y, z = randomCoordinate()
+        x, y, direction = randomCoordinate()
         contretorpilleurBot.setPlace(x, y, direction)
     while croiseurBot.setPlace(x, y, direction) != True:
-        x, y, z = randomCoordinate()
+        x, y, direction = randomCoordinate()
         croiseurBot.setPlace(x, y, direction)
     while porteavionsBot.setPlace(x, y, direction) != True:
-        x, y, z = randomCoordinate()
+        x, y, direction = randomCoordinate()
         porteavionsBot.setPlace(x, y, direction)
     return True

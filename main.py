@@ -27,3 +27,7 @@ bateaux_bot = 5
     # Changement du statut (Attention, il faut des conditions subtiles)
         # Si coulé : BotStatus = "Search"
         # Si touché : BotStatus = "Sniper"
+
+
+BoatsBot()
+print(tabBot(m))
