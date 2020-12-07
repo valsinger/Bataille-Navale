@@ -49,9 +49,6 @@ class torpilleurUser:
                     l[x][y] = "▤"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
-
 
 class sousmarinUser:
     def __init__(self, pv, place):
@@ -101,8 +98,8 @@ class sousmarinUser:
                     l[x][y] = "▥"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
+
+
 
 class contretorpilleurUser:
     def __init__(self, pv, place):
@@ -152,8 +149,8 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
+
+
 
 class croiseurUser:
     def __init__(self, pv, place):
@@ -203,8 +200,8 @@ class croiseurUser:
                     l[x][y] = "▧"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
+
+
 
 class porteavionsUser:
     def __init__(self, pv, place):
@@ -254,8 +251,8 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
+
+
 
 
 # Bateaux bot ------------------------------------------------------------------
@@ -305,8 +302,8 @@ class torpilleurBot:
                     m[x][y] = "▤"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
+
+
 
 class sousmarinBot:
     def __init__(self, pv, place):
@@ -356,8 +353,8 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
+
+
 
 class contretorpilleurBot:
     def __init__(self, pv, place):
@@ -407,8 +404,8 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
+
+
 
 class croiseurBot:
     def __init__(self, pv, place):
@@ -458,8 +455,8 @@ class croiseurBot:
                     m[x][y] = "▧"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
+
+
 
 class porteavionsBot:
     def __init__(self, pv, place):
@@ -509,5 +506,4 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     y += -1
         return ""
-    def coule(self):
-        self._coule = True
+    
