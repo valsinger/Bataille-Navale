@@ -1,4 +1,3 @@
-
 from random import randint
 from boats import *
 
@@ -18,14 +17,13 @@ def BoatsBot():
     while sousmarinBot.setPlace(x, y, direction) != True:
         x, y, z = randomCoordinate()
         torpilleurBot.setPlace(x, y, direction)
-    while contretorpilleurBot.setPlace(contretorpilleurBot, x, y, direction) != True:
+    while contretorpilleurBot.setPlace(x, y, direction) != True:
         x, y, z = randomCoordinate()
-        contretorpilleurBot.setPlace(contretorpilleurBot, x, y, direction)
+        contretorpilleurBot.setPlace(x, y, direction)
     while croiseurBot.setPlace(x, y, direction) != True:
         x, y, z = randomCoordinate()
         croiseurBot.setPlace(x, y, direction)
-    while porteavionsBot.setPlace(porteavionsBot, x, y, direction) != True:
+    while porteavionsBot.setPlace(x, y, direction) != True:
         x, y, z = randomCoordinate()
-
         porteavionsBot.setPlace(x, y, direction)
     return True
