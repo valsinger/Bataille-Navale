@@ -1,16 +1,16 @@
 from coords import *
 from tab import *
 
-#Feuille avec toutes les classes objets des bateaux de l'utilisateur et du bot
-#On repete les accesseurs getPv et getPlace ainsi que le mutateur setPv.
-#Pour chaque bateau, on modifie les PV dans chaque initialisation, ainsi que chaque contraintes dans le mutateur setPlace
-#1 carré représente 20pv
+# Feuille avec toutes les classes objets des bateaux de l'utilisateur et du bot
+# On repete les accesseurs getPv et getPlace ainsi que le mutateur setPv.
+# Pour chaque bateau, on modifie les PV dans chaque initialisation, ainsi que chaque contraintes dans le mutateur setPlace
+# 1 carré représente 20pv
 
-#Bateaux de l'utilisateur
+# Bateaux de l'utilisateur
 
-#Classe du topilleur de l'utilisateur
+# Classe du topilleur de l'utilisateur
 class torpilleurUser:
-    #On definit les accesseurs et les mutateurs
+    # On definit les accesseurs et les mutateurs
     def __init__(self, pv, place):
         self._pv = 40
         self._place = []
@@ -22,7 +22,7 @@ class torpilleurUser:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        #On applique les contraintes de positionnement en fonction de la taille du bateau
+        # On applique les contraintes de positionnement en fonction de la taille du bateau
         if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
@@ -59,7 +59,7 @@ class torpilleurUser:
                     y += -1
         return ""
 
-#Classe du sous-marin de l'utilisateur:
+# Classe du sous-marin de l'utilisateur:
 class sousmarinUser:
     def __init__(self, pv, place):
         self._pv = 60
@@ -110,7 +110,7 @@ class sousmarinUser:
         return ""
 
 
-#Classe du contre torpilleur de l'utilisateur:
+# Classe du contre torpilleur de l'utilisateur:
 class contretorpilleurUser:
     def __init__(self, pv, place):
         self._pv = 60
@@ -161,7 +161,7 @@ class contretorpilleurUser:
         return ""
 
 
-#Classe du croiseur de l'utilisateur:
+# Classe du croiseur de l'utilisateur:
 class croiseurUser:
     def __init__(self, pv, place):
         self._pv = 80
@@ -212,7 +212,7 @@ class croiseurUser:
         return ""
 
 
-#Classe du porte-avions de l'utilisateur:
+# Classe du porte-avions de l'utilisateur:
 class porteavionsUser:
     def __init__(self, pv, place):
         self._pv = 100
@@ -265,16 +265,16 @@ class porteavionsUser:
 
 
 
-#Bateaux du bot
+# Bateaux du bot
 
-#Classe du torpilleur du bot:
+# Classe du torpilleur du bot:
 class torpilleurBot:
     def __init__(self, pv, place):
         self._pv = 40
         self._place = []
-    def getPv(self):
+    def getPv():
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -316,14 +316,14 @@ class torpilleurBot:
         return ""
 
 
-#Classe du sous-marin du bot:
+# Classe du sous-marin du bot:
 class sousmarinBot:
     def __init__(self, pv, place):
         self._pv = 60
         self._place = []
-    def getPv(self):
+    def getPv():
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -367,14 +367,14 @@ class sousmarinBot:
         return ""
 
 
-#Classe du contre torpilleur du bot:
+# Classe du contre torpilleur du bot:
 class contretorpilleurBot:
     def __init__(self, pv, place):
         self._pv = 60
         self._place = []
-    def getPv(self):
+    def getPv():
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -418,7 +418,7 @@ class contretorpilleurBot:
         return ""
 
 
-#Classe du croiseur du bot:
+# Classe du croiseur du bot:
 class croiseurBot:
     def __init__(self, pv, place):
         self._pv = 80
@@ -469,7 +469,7 @@ class croiseurBot:
         return ""
 
 
-#Classe du porte-avions du bot:
+# Classe du porte-avions du bot:
 class porteavionsBot:
     def __init__(self, pv, place):
         self._pv = 100
@@ -518,4 +518,3 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     y += -1
         return ""
-    

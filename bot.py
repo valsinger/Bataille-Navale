@@ -1,10 +1,9 @@
-from coords import *
 from random import randint
 from boats import *
-from tab import *
+
 
 def randomCoordinate():
-    #Cette fonction va nous permettre de generer aléatoirement x, y et direction, on la rappelle quand on veut utiliser d'autres valeurs  
+    # Cette fonction va nous permettre de generer aléatoirement x, y et direction, on la rappelle quand on veut utiliser d'autres valeurs
     x = randint(1, 10)
     y = randint(1, 10)
     direction = randint(1, 4)
