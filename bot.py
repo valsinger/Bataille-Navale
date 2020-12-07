@@ -1,7 +1,5 @@
-from coords import *
-from random import randint
 from boats import *
-from tab import *
+
 
 def randomCoordinate():
     #Cette fonction va nous permettre de generer aléatoirement x, y et direction, on la rappelle quand on veut utiliser d'autres valeurs  
@@ -12,19 +10,19 @@ def randomCoordinate():
 
 def BoatsBot():
     x, y, z = randomCoordinate()
-    while torpilleurBot.setPlace(torpilleurBot, x, y, direction) != True:
+    while torpilleurBot.setPlace(x, y, direction) != True:
         x, y, z = randomCoordinate()
-        torpilleurBot.setPlace(torpilleurBot, x, y, direction)
-    while sousmarinBot.setPlace(sousmarinBot, x, y, direction) != True:
+        torpilleurBot.setPlace(x, y, direction)
+    while sousmarinBot.setPlace(x, y, direction) != True:
         x, y, z = randomCoordinate()
-        torpilleurBot.setPlace(sousmarinBot, x, y, direction)
+        torpilleurBot.setPlace(x, y, direction)
     while contretorpilleurBot.setPlace(contretorpilleurBot, x, y, direction) != True:
         x, y, z = randomCoordinate()
         contretorpilleurBot.setPlace(contretorpilleurBot, x, y, direction)
-    while croiseurBot.setPlace(croiseurBot, x, y, direction) != True:
+    while croiseurBot.setPlace(x, y, direction) != True:
         x, y, z = randomCoordinate()
-        croiseurBot.setPlace(croiseurBot, x, y, direction)
+        croiseurBot.setPlace(x, y, direction)
     while porteavionsBot.setPlace(porteavionsBot, x, y, direction) != True:
         x, y, z = randomCoordinate()
-        porteavionsBot.setPlace(porteavionsBot, x, y, direction)
+        porteavionsBot.setPlace(x, y, direction)
     return True

@@ -17,7 +17,7 @@ class torpilleurUser:
         self._coule = False
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -66,7 +66,7 @@ class sousmarinUser:
         self._place = []
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -117,7 +117,7 @@ class contretorpilleurUser:
         self._place = []
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -168,7 +168,7 @@ class croiseurUser:
         self._place = []
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -219,7 +219,7 @@ class porteavionsUser:
         self._place = []
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -274,7 +274,7 @@ class torpilleurBot:
         self._place = []
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -323,7 +323,7 @@ class sousmarinBot:
         self._place = []
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -374,7 +374,7 @@ class contretorpilleurBot:
         self._place = []
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -425,7 +425,7 @@ class croiseurBot:
         self._place = []
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
@@ -476,7 +476,7 @@ class porteavionsBot:
         self._place = []
     def getPv(self):
         return self._pv
-    def setPv(self, pv):
+    def setPv(pv):
         self._pv = pv
     def getPlace(self):
         return self._place
