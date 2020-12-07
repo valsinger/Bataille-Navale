@@ -30,10 +30,39 @@ bateaux_bot = 5
 
 
 #BoatsBot()
-print(tabBot(m))
+#print(tabBot(m))
 
-torpilleurUser.setPlace(2,2,2)
+ligne = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6, "g": 7, "h": 8, "i": 9, "j": 10, "A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7, "H": 8, "I": 9, "J": 10}
+
+orientation = {"haut": 1, "droite": 2, "bas": 3, "gauche": 4}
+
 print(tab(l))
+x = 0
+y = 0
+direction = 0
+torpilleurUser.setPlace(x, y, direction)
 
-
+while torpilleurUser.setPlace(x, y, direction) == False:
+    while True:
+        try:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+            break
+        except KeyError:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+    while True:
+        try:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+            break
+        except ValueError:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+    while True:
+        try:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+            break
+        except KeyError:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+    torpilleurUser.setPlace(x, y, direction)
+    
+            
+print(tab(l))
 
