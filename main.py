@@ -30,7 +30,7 @@ bateaux_bot = 5
 
 
 #BoatsBot()
-#print(tabBot(m))
+print(tabBot(m))
 
 torpilleurUser.setPlace(2,2,2)
 print(tab(l))

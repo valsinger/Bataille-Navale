@@ -1,5 +1,5 @@
 from tab import *
-from boats import *
+
 # Modifications des tableaux (principalement graphiques) - faciliter la lecture
 
 # On crée la variable qui sera repetée par la fonction tableau qui affiche le tableau de l'utilisateur
