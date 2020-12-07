@@ -29,5 +29,11 @@ bateaux_bot = 5
         # Si touché : BotStatus = "Sniper"
 
 
-BoatsBot()
-print(tabBot(m))
+#BoatsBot()
+#print(tabBot(m))
+
+torpilleurUser.setPlace(2,2,2)
+print(tab(l))
+
+
+
