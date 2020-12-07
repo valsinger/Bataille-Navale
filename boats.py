@@ -1,8 +1,16 @@
 from coords import *
 from tab import *
 
-# Bateaux user -----------------------------------------------------------------
+#Feuille avec toutes les classes objets des bateaux de l'utilisateur et du bot
+#On repete les accesseurs getPv et getPlace ainsi que le mutateur setPv.
+#Pour chaque bateau, on modifie les PV dans chaque initialisation, ainsi que chaque contraintes dans le mutateur setPlace
+#1 carré représente 20pv
+
+#Bateaux de l'utilisateur
+
+#Classe du topilleur de l'utilisateur
 class torpilleurUser:
+    #On definit les accesseurs et les mutateurs
     def __init__(self, pv, place):
         self._pv = 40
         self._place = []
@@ -13,7 +21,8 @@ class torpilleurUser:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
+        #On applique les contraintes de positionnement en fonction de la taille du bateau
         if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
@@ -50,6 +59,7 @@ class torpilleurUser:
                     y += -1
         return ""
 
+#Classe du sous-marin de l'utilisateur:
 class sousmarinUser:
     def __init__(self, pv, place):
         self._pv = 60
@@ -60,7 +70,7 @@ class sousmarinUser:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
         if l[x][y] == "▥":
             return False
         elif x > 10 or x < 1:
@@ -100,7 +110,7 @@ class sousmarinUser:
         return ""
 
 
-
+#Classe du contre torpilleur de l'utilisateur:
 class contretorpilleurUser:
     def __init__(self, pv, place):
         self._pv = 60
@@ -111,7 +121,7 @@ class contretorpilleurUser:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
         if l[x][y] == "▦":
             return False
         elif x > 10 or x < 1:
@@ -151,7 +161,7 @@ class contretorpilleurUser:
         return ""
 
 
-
+#Classe du croiseur de l'utilisateur:
 class croiseurUser:
     def __init__(self, pv, place):
         self._pv = 80
@@ -162,7 +172,7 @@ class croiseurUser:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
         if l[x][y] == "▧":
             return False
         elif x > 10 or x < 1:
@@ -202,7 +212,7 @@ class croiseurUser:
         return ""
 
 
-
+#Classe du porte-avions de l'utilisateur:
 class porteavionsUser:
     def __init__(self, pv, place):
         self._pv = 100
@@ -213,7 +223,7 @@ class porteavionsUser:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
         if l[x][y] == "▨":
             return False
         elif x > 10 or x < 1:
@@ -255,7 +265,9 @@ class porteavionsUser:
 
 
 
-# Bateaux bot ------------------------------------------------------------------
+#Bateaux du bot
+
+#Classe du torpilleur du bot:
 class torpilleurBot:
     def __init__(self, pv, place):
         self._pv = 40
@@ -266,7 +278,7 @@ class torpilleurBot:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
         if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
@@ -304,7 +316,7 @@ class torpilleurBot:
         return ""
 
 
-
+#Classe du sous-marin du bot:
 class sousmarinBot:
     def __init__(self, pv, place):
         self._pv = 60
@@ -315,7 +327,7 @@ class sousmarinBot:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
         if m[x][y] == "▥":
             return False
         elif x > 10 or x < 1:
@@ -355,7 +367,7 @@ class sousmarinBot:
         return ""
 
 
-
+#Classe du contre torpilleur du bot:
 class contretorpilleurBot:
     def __init__(self, pv, place):
         self._pv = 60
@@ -366,7 +378,7 @@ class contretorpilleurBot:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
         if m[x][y] == "▦":
             return False
         elif x > 10 or x < 1:
@@ -406,7 +418,7 @@ class contretorpilleurBot:
         return ""
 
 
-
+#Classe du croiseur du bot:
 class croiseurBot:
     def __init__(self, pv, place):
         self._pv = 80
@@ -417,7 +429,7 @@ class croiseurBot:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
         if m[x][y] == "▧":
             return False
         elif x > 10 or x < 1:
@@ -457,7 +469,7 @@ class croiseurBot:
         return ""
 
 
-
+#Classe du porte-avions du bot:
 class porteavionsBot:
     def __init__(self, pv, place):
         self._pv = 100
@@ -468,7 +480,7 @@ class porteavionsBot:
         self._pv = pv
     def getPlace(self):
         return self._place
-    def setPlace(self, x, y, direction):
+    def setPlace(x, y, direction):
         if m[x][y] == "▨":
             return False
         elif x > 10 or x < 1:

@@ -2,11 +2,12 @@ from tab import *
 from boats import *
 # Modifications des tableaux (principalement graphiques) - faciliter la lecture
 
-# init coords tab --------------------------------------------------------------
+#On crée la variable qui sera repetée par la fonction tableau qui affiche le tableau de l'utilisateur 
 l = 11 * ["~"]
 for i in range(len(l)):
     l[i] = 11 * ["~"]
-
+    
+#Modifications de la première des 11 lignes du tableau, où on affichera le numéro de la colonne, facilitant la lecture par l'utilisateur
 l[0][0] = " "
 l[0][1] = "1"
 l[0][2] = "2"
@@ -19,6 +20,7 @@ l[0][8] = "8"
 l[0][9] = "9"
 l[0][10] = "10"
 
+#Modifications des premières valeurs de chaque ligne du tableau , où on affichera la lettre de la lignes, facilitant la lecture par l'utilisateur
 l[1][0] = "A"
 l[2][0] = "B"
 l[3][0] = "C"
@@ -30,39 +32,17 @@ l[8][0] = "H"
 l[9][0] = "I"
 l[10][0] = "J"
 
-# init coords tabBot -----------------------------------------------------------
+#On crée la variable qui sera repetée par la fonction tableau qui n'affichera pas le tableau à l'utilisateur, mais qui permettra au bot de placer ses bateaux
 m = 11 * ["~"]
 for i in range(len(m)):
     m[i] = 11 * ["~"]
 
-m[0][0] = " "
-m[0][1] = "1"
-m[0][2] = "2"
-m[0][3] = "3"
-m[0][4] = "4"
-m[0][5] = "5"
-m[0][6] = "6"
-m[0][7] = "7"
-m[0][8] = "8"
-m[0][9] = "9"
-m[0][10] = "10"
-
-m[1][0] = "A"
-m[2][0] = "B"
-m[3][0] = "C"
-m[4][0] = "D"
-m[5][0] = "E"
-m[6][0] = "F"
-m[7][0] = "G"
-m[8][0] = "H"
-m[9][0] = "I"
-m[10][0] = "J"
-
-# init coords tabBotForUser ----------------------------------------------------
+#On crée la variable qui sera repetée par la fonction tableau qui affichera le tableau des coups joués
 p = 11 * ["~"]
 for i in range(len(p)):
     p[i] = 11 * ["~"]
 
+#Modifications de la première des 11 lignes du tableau, où on affichera le numéro de la colonne, facilitant la lecture par l'utilisateur
 p[0][0] = " "
 p[0][1] = "1"
 p[0][2] = "2"
@@ -75,6 +55,7 @@ p[0][8] = "8"
 p[0][9] = "9"
 p[0][10] = "10"
 
+#Modifications des premières valeurs de chaque ligne du tableau , où on affichera la lettre de la lignes, facilitant la lecture par l'utilisateur
 p[1][0] = "A"
 p[2][0] = "B"
 p[3][0] = "C"
