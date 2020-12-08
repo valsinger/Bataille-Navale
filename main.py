@@ -42,6 +42,7 @@ y = 0
 direction = 0
 torpilleurUser.setPlace(x, y, direction)
 
+print("Placement du torpilleur (deux cases)")
 while torpilleurUser.setPlace(x, y, direction) == False:
     while True:
         try:
@@ -62,7 +63,124 @@ while torpilleurUser.setPlace(x, y, direction) == False:
         except KeyError:
             direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
     torpilleurUser.setPlace(x, y, direction)
+    print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
     
-            
 print(tab(l))
+
+x = 0
+y = 0
+direction = 0
+torpilleurUser.setPlace(x, y, direction)
+
+print("Placement du sous-marin (trois cases)")
+while sousmarinUser.setPlace(x, y, direction) == False:
+    while True:
+        try:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+            break
+        except KeyError:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+    while True:
+        try:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+            break
+        except ValueError:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+    while True:
+        try:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+            break
+        except KeyError:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+    sousmarinUser.setPlace(x, y, direction)
+    print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
+
+print(tab(l))
+
+x = 0
+y = 0
+direction = 0
+torpilleurUser.setPlace(x, y, direction)
+
+print("Placement du contre-torpillieur (trois cases)")
+while contretorpilleurUser.setPlace(x, y, direction) == False:
+    while True:
+        try:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+            break
+        except KeyError:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+    while True:
+        try:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+            break
+        except ValueError:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+    while True:
+        try:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+            break
+        except KeyError:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+    contretorpilleurUser.setPlace(x, y, direction)
+    print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
+
+print(tab(l))
+
+x = 0
+y = 0
+direction = 0
+torpilleurUser.setPlace(x, y, direction)
+
+print("Placement du croiseur (quatre cases)")
+while croiseurUser.setPlace(x, y, direction) == False:
+    while True:
+        try:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+            break
+        except KeyError:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+    while True:
+        try:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+            break
+        except ValueError:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+    while True:
+        try:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+            break
+        except KeyError:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+    croiseurUser.setPlace(x, y, direction)
+    print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
+
+print(tab(l))
+
+print("Placement du porte-avions (cinq cases)")
+while porteavionsUser.setPlace(x, y, direction) == False:
+    while True:
+        try:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+            break
+        except KeyError:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+    while True:
+        try:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+            break
+        except ValueError:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+    while True:
+        try:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+            break
+        except KeyError:
+            direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
+    porteavionsUser.setPlace(x, y, direction)
+    print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
+
+print(tab(l))
+
+
 

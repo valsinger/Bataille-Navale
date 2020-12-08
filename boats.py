@@ -60,7 +60,7 @@ class torpilleurUser:
         return ""
     def coule():
         self._coule = True
-        
+
 # Classe du sous-marin de l'utilisateur:
 class sousmarinUser:
     def __init__(self, pv, place):
@@ -73,7 +73,7 @@ class sousmarinUser:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if l[x][y] == "▥":
+        if l[x][y] != "~":
             return False
         elif x > 10 or x < 1:
             return False
@@ -86,33 +86,45 @@ class sousmarinUser:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "▥"
+                    if l[x][y] != "~":
+                        return False
+                    else:
+                        l[x][y] = "▥"
                     x += -1
         elif direction == 2:
             if y >= 8:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "▥"
+                    if l[x][y] != "~":
+                        return False
+                    else:
+                        l[x][y] = "▥"
                     y += 1
         elif direction == 3:
             if x >= 8:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "▥"
+                    if l[x][y] != "~":
+                        return False
+                    else:
+                        l[x][y] = "▥"
                     x += 1
         elif direction == 4:
             if y < 3:
                 return False
             else:
                 for i in range(3):
-                    l[x][y] = "▥"
+                    if l[x][y] != "~":
+                        return False
+                    else:
+                        l[x][y] = "▥"
                     y += -1
         return ""
     def coule():
         self._coule = True
-        
+
 
 # Classe du contre torpilleur de l'utilisateur:
 class contretorpilleurUser:
@@ -126,7 +138,7 @@ class contretorpilleurUser:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if l[x][y] == "▦":
+        if l[x][y] != "~":
             return False
         elif x > 10 or x < 1:
             return False
@@ -165,7 +177,7 @@ class contretorpilleurUser:
         return ""
     def coule():
         self._coule = True
-        
+
 
 # Classe du croiseur de l'utilisateur:
 class croiseurUser:
@@ -179,7 +191,7 @@ class croiseurUser:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if l[x][y] == "▧":
+        if l[x][y] != "~":
             return False
         elif x > 10 or x < 1:
             return False
@@ -218,7 +230,7 @@ class croiseurUser:
         return ""
     def coule():
         self._coule = True
-        
+
 
 # Classe du porte-avions de l'utilisateur:
 class porteavionsUser:
@@ -232,7 +244,7 @@ class porteavionsUser:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if l[x][y] == "▨":
+        if l[x][y] != "~":
             return False
         elif x > 10 or x < 1:
             return False
@@ -271,7 +283,7 @@ class porteavionsUser:
         return ""
     def coule():
         self._coule = True
-        
+
 
 
 
@@ -326,7 +338,7 @@ class torpilleurBot:
         return ""
     def coule():
         self._coule = True
-        
+
 
 # Classe du sous-marin du bot:
 class sousmarinBot:
@@ -340,7 +352,7 @@ class sousmarinBot:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if m[x][y] == "▥":
+        if m[x][y] != "~":
             return False
         elif x > 10 or x < 1:
             return False
@@ -379,7 +391,7 @@ class sousmarinBot:
         return ""
     def coule():
         self._coule = True
-        
+
 
 # Classe du contre torpilleur du bot:
 class contretorpilleurBot:
@@ -393,7 +405,7 @@ class contretorpilleurBot:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if m[x][y] == "▦":
+        if m[x][y] != "~":
             return False
         elif x > 10 or x < 1:
             return False
@@ -432,7 +444,7 @@ class contretorpilleurBot:
         return ""
     def coule():
         self._coule = True
-        
+
 
 # Classe du croiseur du bot:
 class croiseurBot:
@@ -446,7 +458,7 @@ class croiseurBot:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if m[x][y] == "▧":
+        if m[x][y] != "~":
             return False
         elif x > 10 or x < 1:
             return False
@@ -485,7 +497,7 @@ class croiseurBot:
         return ""
     def coule():
         self._coule = True
-        
+
 
 # Classe du porte-avions du bot:
 class porteavionsBot:
@@ -499,7 +511,7 @@ class porteavionsBot:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if m[x][y] == "▨":
+        if m[x][y] != "~":
             return False
         elif x > 10 or x < 1:
             return False
@@ -538,4 +550,3 @@ class porteavionsBot:
         return ""
     def coule():
         self._coule = True
-        
