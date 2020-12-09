@@ -32,6 +32,8 @@ bateaux_bot = 5
 #BoatsBot()
 #print(tabBot(m))
 
+grille1Bot()
+
 ligne = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6, "g": 7, "h": 8, "i": 9, "j": 10, "A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7, "H": 8, "I": 9, "J": 10}
 
 orientation = {"haut": 1, "droite": 2, "bas": 3, "gauche": 4}
