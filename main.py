@@ -237,6 +237,13 @@ while isAliveBot() != True and isAliveUser() != True:
     y = randint(1,10)
     attaqueBot(x, y)
     
+    
+#Fin de partie:
+    #if isAliveBot() == False:
+        #print("Vous avez gagné !)
+    #elif isAliveUser() == False:
+        #print("Vous Avez perdu !)
+    
 
     
 
