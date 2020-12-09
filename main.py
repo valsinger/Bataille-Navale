@@ -236,6 +236,8 @@ while isAliveBot() != True and isAliveUser() != True:
     x = randint(1,10)
     y = randint(1,10)
     attaqueBot(x, y)
-    print(tabBot(m))
+    
+
+    
 
 
