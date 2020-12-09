@@ -12,13 +12,13 @@ from tab import *
 class torpilleurUser:
     # On definit les accesseurs et les mutateurs
     def __init__(self, pv, place, coule):
-        self._pv = 40
+        self._pv = pv
         self._place = []
         self._coule = False
     def getPv(self):
         return self._pv
     def setPv(self,pv):
-        self._pv = pv
+        self._pv = 40
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
@@ -66,13 +66,13 @@ class torpilleurUser:
 # Classe du sous-marin de l'utilisateur:
 class sousmarinUser:
     def __init__(self, pv, place, coule):
-        self._pv = 60
+        self._pv = pv
         self._place = []
         self._coule = False
     def getPv(self):
         return self._pv
     def setPv(self,pv):
-        self._pv = pv
+        self._pv = 60
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
@@ -144,13 +144,13 @@ class sousmarinUser:
 # Classe du contre torpilleur de l'utilisateur:
 class contretorpilleurUser:
     def __init__(self, pv, place, coule):
-        self._pv = 60
+        self._pv = pv
         self._place = []
         self._coule = False
     def getPv(self):
         return self._pv
     def setPv(self,pv):
-        self._pv = pv
+        self._pv = 60
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
@@ -222,13 +222,13 @@ class contretorpilleurUser:
 # Classe du croiseur de l'utilisateur:
 class croiseurUser:
     def __init__(self, pv, place, coule):
-        self._pv = 80
+        self._pv = pv
         self._place = []
         self._coule = False
     def getPv(self):
         return self._pv
     def setPv(self,pv):
-        self._pv = pv
+        self._pv = 80
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
@@ -308,13 +308,13 @@ class croiseurUser:
 # Classe du porte-avions de l'utilisateur:
 class porteavionsUser:
     def __init__(self, pv, place, coule):
-        self._pv = 100
+        self._pv = pv
         self._place = []
         self._coule = False
     def getPv(self):
         return self._pv
     def setPv(self,pv):
-        self._pv = pv
+        self._pv = 100
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
@@ -406,13 +406,13 @@ class porteavionsUser:
 # Classe du torpilleur du bot:
 class torpilleurBot:
     def __init__(self, pv, place, coule):
-        self._pv = 40
+        self._pv = pv
         self._place = []
         self._coule = False
     def getPv(self):
         return self._pv
     def setPv(self,pv):
-        self._pv = pv
+        self._pv = 40
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
@@ -460,13 +460,13 @@ class torpilleurBot:
 # Classe du sous-marin du bot:
 class sousmarinBot:
     def __init__(self, pv, place, coule):
-        self._pv = 60
+        self._pv = pv
         self._place = []
         self._coule = False
     def getPv(self):
         return self._pv
     def setPv(self,pv):
-        self._pv = pv
+        self._pv = 60
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
@@ -540,13 +540,13 @@ class sousmarinBot:
 # Classe du contre torpilleur du bot:
 class contretorpilleurBot:
     def __init__(self, pv, place, coule):
-        self._pv = 60
+        self._pv = pv
         self._place = []
         self._coule = False
     def getPv(self):
         return self._pv
     def setPv(self,pv):
-        self._pv = pv
+        self._pv = 60
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
@@ -620,13 +620,13 @@ class contretorpilleurBot:
 # Classe du croiseur du bot:
 class croiseurBot:
     def __init__(self, pv, place, coule):
-        self._pv = 80
+        self._pv = pv
         self._place = []
         self._coule = False
     def getPv(self):
         return self._pv
     def setPv(self,pv):
-        self._pv = pv
+        self._pv = 80
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
@@ -707,14 +707,14 @@ class croiseurBot:
 
 # Classe du porte-avions du bot:
 class porteavionsBot:
-    def __init__(self, pv, place):
-        self._pv = 100
+    def __init__(self, pv, place, coule):
+        self._pv = pv
         self._place = []
         self._coule = False
-    def getPv():
+    def getPv(self):
         return self._pv
     def setPv(pv):
-        self._pv = pv
+        self._pv = 10
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
