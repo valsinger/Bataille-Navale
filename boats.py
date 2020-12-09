@@ -73,53 +73,55 @@ class sousmarinUser:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if l[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if x < 3:
+            if l[x-1][y] != "~":
+                return False
+            elif l[x-2][y] != "~":
+                return False
+            elif x < 3:
                 return False
             else:
                 for i in range(3):
-                    if l[x][y] != "~":
-                        return False
-                    else:
-                        l[x][y] = "▥"
+                    l[x][y] = "▥"
                     x += -1
         elif direction == 2:
-            if y >= 8:
+            if l[x][y+1] != "~":
+                return False
+            elif l[x][y+2] != "~":
+                return False
+            elif y >= 8:
                 return False
             else:
                 for i in range(3):
-                    if l[x][y] != "~":
-                        return False
-                    else:
-                        l[x][y] = "▥"
+                    l[x][y] = "▥"
                     y += 1
         elif direction == 3:
-            if x >= 8:
+            if l[x+1][y] != "~":
+                return False
+            elif l[x+2][y] != "~":
+                return False
+            elif x >= 8:
                 return False
             else:
                 for i in range(3):
-                    if l[x][y] != "~":
-                        return False
-                    else:
-                        l[x][y] = "▥"
+                    l[x][y] = "▥"
                     x += 1
         elif direction == 4:
-            if y < 3:
+            if l[x][y-1] != "~":
+                return False
+            elif l[x][y-2] != "~":
+                return False
+            elif y < 3:
                 return False
             else:
                 for i in range(3):
-                    if l[x][y] != "~":
-                        return False
-                    else:
-                        l[x][y] = "▥"
+                    l[x][y] = "▥"
                     y += -1
         return ""
     def coule():
@@ -138,36 +140,50 @@ class contretorpilleurUser:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if l[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if x < 3:
+            if l[x-1][y] != "~":
+                return False
+            elif l[x-2][y] != "~":
+                return False
+            elif x < 3:
                 return False
             else:
                 for i in range(3):
                     l[x][y] = "▦"
                     x += -1
         elif direction == 2:
-            if y >= 8:
+            if l[x][y+1]!="~":
+                return False
+            elif l[x][y+2]!="~":
+                return False
+            elif y >= 8:
                 return False
             else:
                 for i in range(3):
                     l[x][y] = "▦"
                     y += 1
         elif direction == 3:
-            if x >= 8:
+            if l[x+1][y]!="~":
+                return False
+            elif l[x+2][y]!="~":
+                return False
+            elif x >= 8:
                 return False
             else:
                 for i in range(3):
                     l[x][y] = "▦"
                     x += 1
         elif direction == 4:
+            if l[x][y-1]!="~":
+                return False
+            elif l[x][y-2]!="~":
+                return False
             if y < 3:
                 return False
             else:
@@ -191,37 +207,59 @@ class croiseurUser:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if l[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if x < 4:
+            if l[x-1][y] != "~":
+                return False
+            elif l[x-2][y] != "~":
+                return False
+            elif l[x-3][y] != "~":
+                return False
+            elif x < 4:
                 return False
             else:
                 for i in range(4):
                     l[x][y] = "▧"
                     x += -1
         elif direction == 2:
-            if y >= 7:
+            if l[x][y+1] != "~":
+                return False
+            elif l[x][y+2] != "~":
+                return False
+            elif l[x][y+3] != "~":
+                return False
+            elif y >= 7:
                 return False
             else:
                 for i in range(4):
                     l[x][y] = "▧"
                     y += 1
         elif direction == 3:
-            if x >= 7:
+            if l[x+1][y] != "~":
+                return False
+            elif l[x+2][y] != "~":
+                return False
+            elif l[x+3][y] != "~":
+                return False
+            elif x >= 7:
                 return False
             else:
                 for i in range(4):
                     l[x][y] = "▧"
                     x += 1
         elif direction == 4:
-            if y < 4:
+            if l[x][y-1] != "~":
+                return False
+            elif l[x][y-2] != "~":
+                return False
+            elif l[x][y-3] != "~":
+                return False
+            elif y < 4:
                 return False
             else:
                 for i in range(4):
@@ -244,37 +282,67 @@ class porteavionsUser:
     def getPlace(self):
         return self._place
     def setPlace(x, y, direction):
-        if l[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if x < 5:
+            if l[x-1][y] != "~":
+                return False
+            elif l[x-2][y] != "~":
+                return False
+            elif l[x-3][y] != "~":
+                return False
+            elif l[x-4][y] != "~":
+                return False
+            elif x < 5:
                 return False
             else:
                 for i in range(5):
                     l[x][y] = "▨"
                     x += -1
         elif direction == 2:
-            if y >= 6:
+            if l[x][y+1] != "~":
+                return False
+            elif l[x][y+2] != "~":
+                return False
+            elif l[x][y+3] != "~":
+                return False
+            elif l[x][y+4] != "~":
+                return False
+            elif y >= 6:
                 return False
             else:
                 for i in range(5):
                     l[x][y] = "▨"
                     y += 1
         elif direction == 3:
-            if x >= 6:
+            if l[x+1][y] != "~":
+                return False
+            elif l[x+2][y] != "~":
+                return False
+            elif l[x+3][y] != "~":
+                return False
+            elif l[x+4][y] != "~":
+                return False
+            elif x >= 6:
                 return False
             else:
                 for i in range(5):
                     l[x][y] = "▨"
                     x += 1
         elif direction == 4:
-            if y < 5:
+            if l[x][y-1] != "~":
+                return False
+            elif l[x][y-2] != "~":
+                return False
+            elif l[x][y-3] != "~":
+                return False
+            elif l[x][y-4] != "~":
+                return False
+            elif y < 5:
                 return False
             else:
                 for i in range(5):
@@ -361,28 +429,44 @@ class sousmarinBot:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if x < 3:
+            if m[x-1][y] != "~":
+                return False
+            elif m[x-2][y] != "~":
+                return False
+            elif x < 3:
                 return False
             else:
                 for i in range(3):
                     m[x][y] = "▥"
                     x += -1
         elif direction == 2:
-            if y >= 8:
+            if m[x][y+1]!="~":
+                return False
+            elif m[x][y+2]!="~":
+                return False
+            elif y >= 8:
                 return False
             else:
                 for i in range(3):
                     m[x][y] = "▥"
                     y += 1
         elif direction == 3:
-            if x >= 8:
+            if m[x+1][y]!="~":
+                return False
+            elif m[x+2][y]!="~":
+                return False
+            elif x >= 8:
                 return False
             else:
                 for i in range(3):
                     m[x][y] = "▥"
                     x += 1
         elif direction == 4:
-            if y < 3:
+            if m[x][y-1]!="~":
+                return False
+            elif m[x][y-2]!="~":
+                return False
+            elif y < 3:
                 return False
             else:
                 for i in range(3):
@@ -414,28 +498,44 @@ class contretorpilleurBot:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if x < 3:
+            if m[x-1][y] != "~":
+                return False
+            elif m[x-2][y] != "~":
+                return False
+            elif x < 3:
                 return False
             else:
                 for i in range(3):
                     m[x][y] = "▦"
                     x += -1
         elif direction == 2:
-            if y >= 8:
+            if m[x][y+1]!="~":
+                return False
+            elif m[x][y+2]!="~":
+                return False
+            elif y >= 8:
                 return False
             else:
                 for i in range(3):
                     m[x][y] = "▦"
                     y += 1
         elif direction == 3:
-            if x >= 8:
+            if m[x+1][y]!="~":
+                return False
+            elif m[x+2][y]!="~":
+                return False
+            elif x >= 8:
                 return False
             else:
                 for i in range(3):
                     m[x][y] = "▦"
                     x += 1
         elif direction == 4:
-            if y < 3:
+            if m[x][y-1]!="~":
+                return False
+            elif m[x][y-2]!="~":
+                return False
+            elif y < 3:
                 return False
             else:
                 for i in range(3):
@@ -467,28 +567,52 @@ class croiseurBot:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if x < 4:
+            if m[x-1][y] != "~":
+                return False
+            elif m[x-2][y] != "~":
+                return False
+            elif m[x-3][y] != "~":
+                return False
+            elif x < 4:
                 return False
             else:
                 for i in range(4):
                     m[x][y] = "▧"
                     x += -1
         elif direction == 2:
-            if y >= 7:
+            if m[x][y+1] != "~":
+                return False
+            elif m[x][y+2] != "~":
+                return False
+            elif m[x][y+3] != "~":
+                return False
+            elif y >= 7:
                 return False
             else:
                 for i in range(4):
                     m[x][y] = "▧"
                     y += 1
         elif direction == 3:
-            if x >= 7:
+            if m[x+1][y] != "~":
+                return False
+            elif m[x+2][y] != "~":
+                return False
+            elif m[x+3][y] != "~":
+                return False
+            elif x >= 7:
                 return False
             else:
                 for i in range(4):
                     m[x][y] = "▧"
                     x += 1
         elif direction == 4:
-            if y < 4:
+            if m[x][y-1] != "~":
+                return False
+            elif m[x][y-2] != "~":
+                return False
+            elif m[x][y-3] != "~":
+                return False
+            elif y < 4:
                 return False
             else:
                 for i in range(4):
@@ -520,13 +644,29 @@ class porteavionsBot:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if x < 5:
+            if m[x-1][y] != "~":
+                return False
+            elif m[x-2][y] != "~":
+                return False
+            elif m[x-3][y] != "~":
+                return False
+            elif m[x-4][y] != "~":
+                return False
+            elif x < 5:
                 return False
             else:
                 for i in range(5):
                     m[x][y] = "▨"
                     x += -1
         elif direction == 2:
+            if m[x][y+1] != "~":
+                return False
+            elif m[x][y+2] != "~":
+                return False
+            elif m[x][y+3] != "~":
+                return False
+            elif m[x][y+4] != "~":
+                return False
             if y >= 6:
                 return False
             else:
@@ -534,14 +674,32 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     y += 1
         elif direction == 3:
-            if x >= 6:
+            if m[x+1][y] != "~":
+                return False
+            elif m[x+2][y] != "~":
+                return False
+            elif m[x+3][y] != "~":
+                return False
+            elif m[x+4][y] != "~":
+                return False
+            elif x >= 6:
                 return False
             else:
                 for i in range(5):
                     m[x][y] = "▨"
                     x += 1
         elif direction == 4:
-            if y < 5:
+            if m[x][y-1] != "~":
+                return False
+            elif m[x][y-2] != "~":
+                return False
+            elif m[x][y-3] != "~":
+                return False
+            elif m[x][y-4] != "~":
+                return False
+            elif y < 5:
+                return False
+            elif y < 5:
                 return False
             else:
                 for i in range(5):

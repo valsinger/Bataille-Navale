@@ -40,7 +40,9 @@ print(tab(l))
 x = 0
 y = 0
 direction = 0
-torpilleurUser.setPlace(x, y, direction)
+
+
+#torpilleurUser.setPlace(x, y, direction)
 
 print("Placement du torpilleur (deux cases)")
 while torpilleurUser.setPlace(x, y, direction) == False:
@@ -62,7 +64,7 @@ while torpilleurUser.setPlace(x, y, direction) == False:
             break
         except KeyError:
             direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
-    torpilleurUser.setPlace(x, y, direction)
+            torpilleurUser.setPlace(x, y, direction)
     print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
     
 print(tab(l))
@@ -70,7 +72,8 @@ print(tab(l))
 x = 0
 y = 0
 direction = 0
-torpilleurUser.setPlace(x, y, direction)
+
+sousmarinUser.setPlace(x, y, direction)
 
 print("Placement du sous-marin (trois cases)")
 while sousmarinUser.setPlace(x, y, direction) == False:
@@ -92,7 +95,7 @@ while sousmarinUser.setPlace(x, y, direction) == False:
             break
         except KeyError:
             direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
-    sousmarinUser.setPlace(x, y, direction)
+            sousmarinUser.setPlace(x, y, direction)
     print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
 
 print(tab(l))
@@ -100,7 +103,8 @@ print(tab(l))
 x = 0
 y = 0
 direction = 0
-torpilleurUser.setPlace(x, y, direction)
+
+contretorpilleurUser.setPlace(x, y, direction)
 
 print("Placement du contre-torpillieur (trois cases)")
 while contretorpilleurUser.setPlace(x, y, direction) == False:
@@ -122,7 +126,7 @@ while contretorpilleurUser.setPlace(x, y, direction) == False:
             break
         except KeyError:
             direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
-    contretorpilleurUser.setPlace(x, y, direction)
+            contretorpilleurUser.setPlace(x, y, direction)
     print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
 
 print(tab(l))
@@ -130,7 +134,8 @@ print(tab(l))
 x = 0
 y = 0
 direction = 0
-torpilleurUser.setPlace(x, y, direction)
+
+croiseurUser.setPlace(x, y, direction)
 
 print("Placement du croiseur (quatre cases)")
 while croiseurUser.setPlace(x, y, direction) == False:
@@ -152,10 +157,16 @@ while croiseurUser.setPlace(x, y, direction) == False:
             break
         except KeyError:
             direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
-    croiseurUser.setPlace(x, y, direction)
+            croiseurUser.setPlace(x, y, direction)
     print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
 
 print(tab(l))
+
+x = 0
+y = 0
+direction = 0
+
+porteavionsUser.setPlace(x, y, direction)
 
 print("Placement du porte-avions (cinq cases)")
 while porteavionsUser.setPlace(x, y, direction) == False:
@@ -177,7 +188,7 @@ while porteavionsUser.setPlace(x, y, direction) == False:
             break
         except KeyError:
             direction = orientation[input("Entrez une direction (haut, droite, bas, gauche): ")]
-    porteavionsUser.setPlace(x, y, direction)
+            porteavionsUser.setPlace(x, y, direction)
     print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
 
 print(tab(l))
