@@ -84,48 +84,68 @@ def attaqueBot(x, y):
             # On modifie le caractère touché du bateau par une croix sur le tableau l
             l[x][y] = "x"
             return "Touché !"
+            BotStatus = "Sniper"
+            xt = x
+            yt = y
         else:
             # Si le bateau touché n'a que 20pv, cela veut dire que si on lui met un coup, il coule, donc on utilise directement la fonction .setCoule()
             torpilleurUser.setCoule(torpilleurUser)
             # On modifie le caractère touché du bateau par une croix sur le tableau l
             l[x][y] = "x"
             return "Coulé !"
+            BotStatus = "Search"
     elif l[x][y] == "▥":
         if sousmarinUser.getPv(sousmarinUser) != 20:
             sousmarinUser.setPv(sousmarinUser.getPV(sousmarinUser) - 20)
             l[x][y] = "x"
             return "Touché !"
+            BotStatus = "Sniper"
+            xt = x
+            yt = y
         else:
             sousmarinUser.setCoule(sousmarinUser)
             l[x][y] = "x"
             return "Coulé !"
+            BotStatus = "Search"
     elif l[x][y] == "▦":
         if contretorpilleurUser.getPv(contretorpilleurUser) != 20:
             contretorpilleurUser.setPv(contretorpilleurUser.getPV(contretorpilleurUser) - 20)
             l[x][y] = "x"
             return "Touché !"
+            BotStatus = "Sniper"
+            xt = x
+            yt = y
         else:
             contretorpilleurUser.setCoule(contretorpilleurUser)
             l[x][y] = "x"
             return "Coulé !"
+            BotStatus = "Search"
     elif l[x][y] == "▧":
         if croiseurUser.getPv(croiseurUser) != 20:
             croiseurUser.setPv(croiseurUser.getPV(croiseurUser) - 20)
             l[x][y] = "x"
             return "Touché !"
+            BotStatus = "Sniper"
+            xt = x
+            yt = y
         else:
             croiseurUser.setCoule(croiseurUser)
             l[x][y] = "x"
             return "Coulé !"
+            BotStatus = "Search"
     elif l[x][y] == "▨":
         if porteavionsUser.getPv(porteavionsUser) != 20:
             porteavionsUser.setPv(porteavionsUser.getPV(porteavionsUser) - 20)
             l[x][y] = "x"
             return "Touché !"
+            BotStatus = "Sniper"
+            xt = x
+            yt = y
         else:
             porteavionsUser.setCoule(porteavionsUser)
             l[x][y] = "x"
             return "Coulé !"
+            BotStatus = "Search"
     # Si la coordonnée saisie à deja été saisie, donc que le caractère a dejà été changé, donc on retourne False, ce qui demandera à l'utilisateur de saisir de noucelles valeurs
     elif l[x][y] == "x" or l[x][y] == "o":
         return False
