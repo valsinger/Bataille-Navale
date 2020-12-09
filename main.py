@@ -6,7 +6,8 @@ from coords import *
 from boats import *
 from bot import *
 from attaque import *
-
+from grille import *
+from random import *
 
 # Initialisiation du jeu
 BotStatus = "Search"
@@ -32,7 +33,20 @@ bateaux_bot = 5
 #BoatsBot()
 #print(tabBot(m))
 
-grille1Bot()
+#Programme qui va choisir au hasard une des grilles du bot
+
+a=randint(1,5)
+
+if a == 1:
+    grille1Bot()
+elif a == 2:
+    grille2Bot()
+elif a == 3:
+    grille3Bot()
+elif a == 4:
+    grille4Bot()
+elif a == 5:
+    grille5Bot()
 
 ligne = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6, "g": 7, "h": 8, "i": 9, "j": 10, "A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7, "H": 8, "I": 9, "J": 10}
 
@@ -195,8 +209,33 @@ while porteavionsUser.setPlace(x, y, direction) == False:
 
 print(tab(l))
 
+
+#Phase d'attaque:
+    
+
+print("Entrée en combat !","\n")
+
 while isAliveBot() != True and isAliveUser() != True:
-    attaqueUser(x, y)
+    print("Tableau de visée")
+    print(tabBotForUser(p))
+    print("Tableau de l'utilisateur")
+    print(tab(l))
+    while True:
+        try:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+            break
+        except KeyError:
+            x = ligne[input("Entrez une ligne (entre A et J): ")]
+    while True:
+        try:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+            break
+        except ValueError:
+            y = int(input("Entrez une colonne (Entre 1 et 10): "))
+            attaqueUser(x, y)
+    x = randint(1,10)
+    y = randint(1,10)
     attaqueBot(x, y)
+    print(tabBot(m))
 
 

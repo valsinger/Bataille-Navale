@@ -8,7 +8,7 @@ def attaqueUser(x, y):
     if m[x][y] == "▤":
         if torpilleurBot._pv != 20:
             # Tant que le bateau a plus de 20pv, on peut lui enlever 20pv
-            torpilleurBot.setPv(torpilleurBot.getPV() - 20)
+            torpilleurBot.setPv(torpilleurBot.getPV(torpilleurBot) - 20)
             # On modifie le caractère touché du bateau par une croix sur les tableaux m et p
             m[x][y] = "x"
             p[x][y] = "x"
@@ -22,7 +22,7 @@ def attaqueUser(x, y):
             print("Coulé !")
     elif m[x][y] == "▥":
         if sousmarinBot._pv != 20:
-            sousmarinBot.setPv(sousmarinBot.getPV() - 20)
+            sousmarinBot.setPv(sousmarinBot.getPV(sousmarinBot) - 20)
             m[x][y] = "x"
             p[x][y] = "x"
             print("Touché !")
@@ -33,7 +33,7 @@ def attaqueUser(x, y):
             print("Coulé !")
     elif m[x][y] == "▦":
         if contretorpilleurBot._pv != 20:
-            contretorpilleurBot.setPv(contretorpilleurBot.getPV() - 20)
+            contretorpilleurBot.setPv(contretorpilleurBot.getPV(contretorpilleurBot) - 20)
             m[x][y] = "x"
             p[x][y] = "x"
             print("Touché !")
@@ -44,7 +44,7 @@ def attaqueUser(x, y):
             print("Coulé !")
     elif m[x][y] == "▧":
         if croiseurBot._pv != 20:
-            croiseurBot.setPv(croiseurBot.getPV() - 20)
+            croiseurBot.setPv(croiseurBot.getPV(croiseurBot) - 20)
             m[x][y] = "x"
             p[x][y] = "x"
             print("Touché !")
@@ -55,7 +55,7 @@ def attaqueUser(x, y):
             print("Coulé !")
     elif m[x][y] == "▨":
         if porteavionsBot._pv != 20:
-            porteavionsBot.setPv(porteavionsBot.getPV() - 20)
+            porteavionsBot.setPv(porteavionsBot.getPV(porteavionsBot) - 20)
             m[x][y] = "x"
             p[x][y] = "x"
             print("Touché !")
@@ -80,7 +80,7 @@ def attaqueBot(x, y):
     if l[x][y] == "▤":
         if torpilleurUser._pv != 20:
             # Tant que le bateau a plus de 20pv, on peut lui enlever 20pv
-            torpilleurUser.setPv(torpilleurUser.getPV() - 20)
+            torpilleurUser.setPv(torpilleurUser.getPV(torpilleurUser) - 20)
             # On modifie le caractère touché du bateau par une croix sur le tableau l
             l[x][y] = "x"
             return "Touché !"
@@ -92,7 +92,7 @@ def attaqueBot(x, y):
             return "Coulé !"
     elif l[x][y] == "▥":
         if sousmarinUser._pv != 20:
-            sousmarinUser.setPv(sousmarinUser.getPV() - 20)
+            sousmarinUser.setPv(sousmarinUser.getPV(sousmarinUser) - 20)
             l[x][y] = "x"
             return "Touché !"
         else:
@@ -101,7 +101,7 @@ def attaqueBot(x, y):
             return "Coulé !"
     elif l[x][y] == "▦":
         if contretorpilleurUser._pv != 20:
-            contretorpilleurUser.setPv(contretorpilleurUser.getPV() - 20)
+            contretorpilleurUser.setPv(contretorpilleurUser.getPV(contretorpilleurUser) - 20)
             l[x][y] = "x"
             return "Touché !"
         else:
@@ -110,7 +110,7 @@ def attaqueBot(x, y):
             return "Coulé !"
     elif l[x][y] == "▧":
         if croiseurUser._pv != 20:
-            croiseurUser.setPv(croiseurUser.getPV() - 20)
+            croiseurUser.setPv(croiseurUser.getPV(croiseurUser) - 20)
             l[x][y] = "x"
             return "Touché !"
         else:
@@ -119,7 +119,7 @@ def attaqueBot(x, y):
             return "Coulé !"
     elif l[x][y] == "▨":
         if porteavionsUser._pv != 20:
-            porteavionsUser.setPv(porteavionsUser.getPV() - 20)
+            porteavionsUser.setPv(porteavionsUser.getPV(porteavionsUser) - 20)
             l[x][y] = "x"
             return "Touché !"
         else:
