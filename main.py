@@ -9,6 +9,16 @@ from attaque import *
 from grille import *
 from random import *
 
+
+print("__________         __         .__.__  .__            _______                      .__          ")
+print("\______   \_____ _/  |______  |__|  | |  |   ____    \      \ _____ ___  _______  |  |   ____  ")
+print(" |    |  _/\__  \\   __\__  \ |  |  | |  | _/ __ \   /   |   \\__  \\  \/ /\__  \ |  | _/ __ \ ")
+print(" |    |   \ / __ \|  |  / __ \|  |  |_|  |_\  ___/  /    |    \/ __ \\   /  / __ \|  |_\  ___/ ")
+print(" |______  /(____  /__| (____  /__|____/____/\___  > \____|__  (____  /\_/  (____  /____/\___  >")
+print("        \/      \/          \/                  \/          \/     \/           \/          \/ ")
+
+
+
 # Initialisiation du jeu
 BotStatus = "Search"
 # création du tableau + placement des bateaux du bot
