@@ -80,7 +80,9 @@ class sousmarinUser:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if l[x-1][y] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x-1][y] != "~":
                 return False
             elif l[x-2][y] != "~":
                 return False
@@ -91,7 +93,9 @@ class sousmarinUser:
                     l[x][y] = "▥"
                     x += -1
         elif direction == 2:
-            if l[x][y+1] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x][y+1] != "~":
                 return False
             elif l[x][y+2] != "~":
                 return False
@@ -102,7 +106,9 @@ class sousmarinUser:
                     l[x][y] = "▥"
                     y += 1
         elif direction == 3:
-            if l[x+1][y] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x+1][y] != "~":
                 return False
             elif l[x+2][y] != "~":
                 return False
@@ -113,7 +119,9 @@ class sousmarinUser:
                     l[x][y] = "▥"
                     x += 1
         elif direction == 4:
-            if l[x][y-1] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x][y-1] != "~":
                 return False
             elif l[x][y-2] != "~":
                 return False
@@ -147,7 +155,9 @@ class contretorpilleurUser:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if l[x-1][y] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x-1][y] != "~":
                 return False
             elif l[x-2][y] != "~":
                 return False
@@ -158,7 +168,9 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     x += -1
         elif direction == 2:
-            if l[x][y+1]!="~":
+            if l[x][y] != "~":
+                return False
+            elif l[x][y+1]!="~":
                 return False
             elif l[x][y+2]!="~":
                 return False
@@ -169,7 +181,9 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     y += 1
         elif direction == 3:
-            if l[x+1][y]!="~":
+            if l[x][y] != "~":
+                return False
+            elif l[x+1][y]!="~":
                 return False
             elif l[x+2][y]!="~":
                 return False
@@ -180,11 +194,13 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     x += 1
         elif direction == 4:
-            if l[x][y-1]!="~":
+            if l[x][y] != "~":
+                return False
+            elif l[x][y-1]!="~":
                 return False
             elif l[x][y-2]!="~":
                 return False
-            if y < 3:
+            elif y < 3:
                 return False
             else:
                 for i in range(3):
@@ -214,7 +230,9 @@ class croiseurUser:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if l[x-1][y] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x-1][y] != "~":
                 return False
             elif l[x-2][y] != "~":
                 return False
@@ -227,7 +245,9 @@ class croiseurUser:
                     l[x][y] = "▧"
                     x += -1
         elif direction == 2:
-            if l[x][y+1] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x][y+1] != "~":
                 return False
             elif l[x][y+2] != "~":
                 return False
@@ -240,7 +260,9 @@ class croiseurUser:
                     l[x][y] = "▧"
                     y += 1
         elif direction == 3:
-            if l[x+1][y] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x+1][y] != "~":
                 return False
             elif l[x+2][y] != "~":
                 return False
@@ -253,7 +275,9 @@ class croiseurUser:
                     l[x][y] = "▧"
                     x += 1
         elif direction == 4:
-            if l[x][y-1] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x][y-1] != "~":
                 return False
             elif l[x][y-2] != "~":
                 return False
@@ -289,7 +313,9 @@ class porteavionsUser:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if l[x-1][y] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x-1][y] != "~":
                 return False
             elif l[x-2][y] != "~":
                 return False
@@ -304,7 +330,9 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     x += -1
         elif direction == 2:
-            if l[x][y+1] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x][y+1] != "~":
                 return False
             elif l[x][y+2] != "~":
                 return False
@@ -319,7 +347,9 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     y += 1
         elif direction == 3:
-            if l[x+1][y] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x+1][y] != "~":
                 return False
             elif l[x+2][y] != "~":
                 return False
@@ -334,7 +364,9 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     x += 1
         elif direction == 4:
-            if l[x][y-1] != "~":
+            if l[x][y] != "~":
+                return False
+            elif l[x][y-1] != "~":
                 return False
             elif l[x][y-2] != "~":
                 return False
@@ -429,7 +461,9 @@ class sousmarinBot:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if m[x-1][y] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x-1][y] != "~":
                 return False
             elif m[x-2][y] != "~":
                 return False
@@ -440,7 +474,9 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     x += -1
         elif direction == 2:
-            if m[x][y+1]!="~":
+            if m[x][y] != "~":
+                return False
+            elif m[x][y+1]!="~":
                 return False
             elif m[x][y+2]!="~":
                 return False
@@ -451,7 +487,9 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     y += 1
         elif direction == 3:
-            if m[x+1][y]!="~":
+            if m[x][y] != "~":
+                return False
+            elif m[x+1][y]!="~":
                 return False
             elif m[x+2][y]!="~":
                 return False
@@ -462,7 +500,9 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     x += 1
         elif direction == 4:
-            if m[x][y-1]!="~":
+            if m[x][y] != "~":
+                return False
+            elif m[x][y-1]!="~":
                 return False
             elif m[x][y-2]!="~":
                 return False
@@ -498,7 +538,9 @@ class contretorpilleurBot:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if m[x-1][y] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x-1][y] != "~":
                 return False
             elif m[x-2][y] != "~":
                 return False
@@ -509,7 +551,9 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     x += -1
         elif direction == 2:
-            if m[x][y+1]!="~":
+            if m[x][y] != "~":
+                return False
+            elif m[x][y+1]!="~":
                 return False
             elif m[x][y+2]!="~":
                 return False
@@ -520,7 +564,9 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     y += 1
         elif direction == 3:
-            if m[x+1][y]!="~":
+            if m[x][y] != "~":
+                return False
+            elif m[x+1][y]!="~":
                 return False
             elif m[x+2][y]!="~":
                 return False
@@ -531,7 +577,9 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     x += 1
         elif direction == 4:
-            if m[x][y-1]!="~":
+            if m[x][y] != "~":
+                return False
+            elif m[x][y-1]!="~":
                 return False
             elif m[x][y-2]!="~":
                 return False
@@ -567,7 +615,9 @@ class croiseurBot:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if m[x-1][y] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x-1][y] != "~":
                 return False
             elif m[x-2][y] != "~":
                 return False
@@ -580,7 +630,9 @@ class croiseurBot:
                     m[x][y] = "▧"
                     x += -1
         elif direction == 2:
-            if m[x][y+1] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x][y+1] != "~":
                 return False
             elif m[x][y+2] != "~":
                 return False
@@ -593,7 +645,9 @@ class croiseurBot:
                     m[x][y] = "▧"
                     y += 1
         elif direction == 3:
-            if m[x+1][y] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x+1][y] != "~":
                 return False
             elif m[x+2][y] != "~":
                 return False
@@ -606,7 +660,9 @@ class croiseurBot:
                     m[x][y] = "▧"
                     x += 1
         elif direction == 4:
-            if m[x][y-1] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x][y-1] != "~":
                 return False
             elif m[x][y-2] != "~":
                 return False
@@ -644,7 +700,9 @@ class porteavionsBot:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if m[x-1][y] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x-1][y] != "~":
                 return False
             elif m[x-2][y] != "~":
                 return False
@@ -659,7 +717,9 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     x += -1
         elif direction == 2:
-            if m[x][y+1] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x][y+1] != "~":
                 return False
             elif m[x][y+2] != "~":
                 return False
@@ -674,7 +734,9 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     y += 1
         elif direction == 3:
-            if m[x+1][y] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x+1][y] != "~":
                 return False
             elif m[x+2][y] != "~":
                 return False
@@ -689,7 +751,9 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     x += 1
         elif direction == 4:
-            if m[x][y-1] != "~":
+            if m[x][y] != "~":
+                return False
+            elif m[x][y-1] != "~":
                 return False
             elif m[x][y-2] != "~":
                 return False
