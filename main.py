@@ -67,11 +67,6 @@ while torpilleurUser.setPlace(x, y, direction) == False:
     
 print(tab(l))
 
-x = 0
-y = 0
-direction = 0
-torpilleurUser.setPlace(x, y, direction)
-
 print("Placement du sous-marin (trois cases)")
 while sousmarinUser.setPlace(x, y, direction) == False:
     while True:
@@ -97,11 +92,6 @@ while sousmarinUser.setPlace(x, y, direction) == False:
 
 print(tab(l))
 
-x = 0
-y = 0
-direction = 0
-torpilleurUser.setPlace(x, y, direction)
-
 print("Placement du contre-torpillieur (trois cases)")
 while contretorpilleurUser.setPlace(x, y, direction) == False:
     while True:
@@ -126,11 +116,6 @@ while contretorpilleurUser.setPlace(x, y, direction) == False:
     print("Les coordonées que vous avez entré ne fonctionnent pas, veuillez recommencer.")
 
 print(tab(l))
-
-x = 0
-y = 0
-direction = 0
-torpilleurUser.setPlace(x, y, direction)
 
 print("Placement du croiseur (quatre cases)")
 while croiseurUser.setPlace(x, y, direction) == False:

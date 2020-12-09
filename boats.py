@@ -1,6 +1,7 @@
 from coords import *
 from tab import *
 
+
 # Feuille avec toutes les classes objets des bateaux de l'utilisateur et du bot
 # On repete les accesseurs getPv et getPlace ainsi que le mutateur setPv.
 # Pour chaque bateau, on modifie les PV dans chaque initialisation, ainsi que chaque contraintes dans le mutateur setPlace
@@ -15,12 +16,16 @@ class torpilleurUser:
         self._pv = 40
         self._place = []
         self._coule = False
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
         # On applique les contraintes de positionnement en fonction de la taille du bateau
         if x > 10 or x < 1:
@@ -58,70 +63,79 @@ class torpilleurUser:
                     l[x][y] = "▤"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
+
 
 # Classe du sous-marin de l'utilisateur:
 class sousmarinUser:
     def __init__(self, pv, place):
         self._pv = 60
         self._place = []
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
-        if l[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
+            for i in range(3):
+                if l[x][y] != "~":
+                    return False
+                x += -1
             if x < 3:
                 return False
             else:
                 for i in range(3):
-                    if l[x][y] != "~":
-                        return False
-                    else:
-                        l[x][y] = "▥"
+                    l[x][y] = "▥"
                     x += -1
         elif direction == 2:
+            for i in range(3):
+                if l[x][y] != "~":
+                    return False
+                y += 1
             if y >= 8:
                 return False
             else:
                 for i in range(3):
-                    if l[x][y] != "~":
-                        return False
-                    else:
-                        l[x][y] = "▥"
+                    l[x][y] = "▥"
                     y += 1
         elif direction == 3:
+            for i in range(3):
+                if l[x][y] != "~":
+                    return False
+                x += 1
             if x >= 8:
                 return False
             else:
                 for i in range(3):
-                    if l[x][y] != "~":
-                        return False
-                    else:
-                        l[x][y] = "▥"
+                    l[x][y] = "▥"
                     x += 1
         elif direction == 4:
+            for i in range(3):
+                if l[x][y] != "~":
+                    return False
+                y += -1
             if y < 3:
                 return False
             else:
                 for i in range(3):
-                    if l[x][y] != "~":
-                        return False
-                    else:
-                        l[x][y] = "▥"
+                    l[x][y] = "▥"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
 
@@ -131,22 +145,28 @@ class contretorpilleurUser:
     def __init__(self, pv, place):
         self._pv = 60
         self._place = []
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
-        if l[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
+            for i in range(3):
+                if l[x][y] != "~":
+                    return False
+                x += -1
             if x < 3:
                 return False
             else:
@@ -154,6 +174,10 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     x += -1
         elif direction == 2:
+            for i in range(3):
+                if l[x][y] != "~":
+                    return False
+                y += 1
             if y >= 8:
                 return False
             else:
@@ -161,6 +185,10 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     y += 1
         elif direction == 3:
+            for i in range(3):
+                if l[x][y] != "~":
+                    return False
+                x += 1
             if x >= 8:
                 return False
             else:
@@ -168,6 +196,10 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     x += 1
         elif direction == 4:
+            for i in range(3):
+                if l[x][y] != "~":
+                    return False
+                y += -1
             if y < 3:
                 return False
             else:
@@ -175,6 +207,7 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
 
@@ -184,22 +217,28 @@ class croiseurUser:
     def __init__(self, pv, place):
         self._pv = 80
         self._place = []
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
-        if l[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
+            for i in range(4):
+                if l[x][y] != "~":
+                    return False
+                x += -1
             if x < 4:
                 return False
             else:
@@ -207,13 +246,21 @@ class croiseurUser:
                     l[x][y] = "▧"
                     x += -1
         elif direction == 2:
+            for i in range(4):
+                if l[x][y] != "~":
+                    return False
+                y += 1
             if y >= 7:
                 return False
             else:
                 for i in range(4):
                     l[x][y] = "▧"
-                    y += 1
+                    x += 1
         elif direction == 3:
+            for i in range(4):
+                if l[x][y] != "~":
+                    return False
+                x += 1
             if x >= 7:
                 return False
             else:
@@ -221,6 +268,10 @@ class croiseurUser:
                     l[x][y] = "▧"
                     x += 1
         elif direction == 4:
+            for i in range(4):
+                if l[x][y] != "~":
+                    return False
+                y += -1
             if y < 4:
                 return False
             else:
@@ -228,6 +279,7 @@ class croiseurUser:
                     l[x][y] = "▧"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
 
@@ -237,22 +289,28 @@ class porteavionsUser:
     def __init__(self, pv, place):
         self._pv = 100
         self._place = []
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
-        if l[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
+            for i in range(5):
+                if l[x][y] != "~":
+                    return False
+                x += -1
             if x < 5:
                 return False
             else:
@@ -260,6 +318,10 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     x += -1
         elif direction == 2:
+            for i in range(5):
+                if l[x][y] != "~":
+                    return False
+                y += 1
             if y >= 6:
                 return False
             else:
@@ -267,6 +329,10 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     y += 1
         elif direction == 3:
+            for i in range(5):
+                if l[x][y] != "~":
+                    return False
+                x += 1
             if x >= 6:
                 return False
             else:
@@ -274,6 +340,10 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     x += 1
         elif direction == 4:
+            for i in range(5):
+                if l[x][y] != "~":
+                    return False
+                y += -1
             if y < 5:
                 return False
             else:
@@ -281,10 +351,9 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
-
-
 
 
 # Bateaux du bot
@@ -294,12 +363,16 @@ class torpilleurBot:
     def __init__(self, pv, place):
         self._pv = 40
         self._place = []
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
         if x > 10 or x < 1:
             return False
@@ -308,34 +381,35 @@ class torpilleurBot:
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
-            if x < 2:
+            if x < 3:
                 return False
             else:
-                for i in range(2):
-                    m[x][y] = "▤"
+                for i in range(3):
+                    m[x][y] = "▥"
                     x += -1
         elif direction == 2:
-            if y >= 9:
+            if y >= 8:
                 return False
             else:
-                for i in range(2):
-                    m[x][y] = "▤"
+                for i in range(3):
+                    m[x][y] = "▥"
                     y += 1
         elif direction == 3:
-            if x >= 9:
+            if x >= 8:
                 return False
             else:
-                for i in range(2):
-                    m[x][y] = "▤"
+                for i in range(3):
+                    m[x][y] = "▥"
                     x += 1
         elif direction == 4:
-            if y < 2:
+            if y < 3:
                 return False
             else:
-                for i in range(2):
-                    m[x][y] = "▤"
+                for i in range(3):
+                    m[x][y] = "▥"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
 
@@ -345,22 +419,28 @@ class sousmarinBot:
     def __init__(self, pv, place):
         self._pv = 60
         self._place = []
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
-        if m[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
+            for i in range(3):
+                if m[x][y] != "~":
+                    return False
+                x += -1
             if x < 3:
                 return False
             else:
@@ -368,6 +448,10 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     x += -1
         elif direction == 2:
+            for i in range(3):
+                if m[x][y] != "~":
+                    return False
+                y += 1
             if y >= 8:
                 return False
             else:
@@ -375,6 +459,10 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     y += 1
         elif direction == 3:
+            for i in range(3):
+                if m[x][y] != "~":
+                    return False
+                x += 1
             if x >= 8:
                 return False
             else:
@@ -382,6 +470,10 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     x += 1
         elif direction == 4:
+            for i in range(3):
+                if m[x][y] != "~":
+                    return False
+                y += -1
             if y < 3:
                 return False
             else:
@@ -389,6 +481,7 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
 
@@ -398,22 +491,28 @@ class contretorpilleurBot:
     def __init__(self, pv, place):
         self._pv = 60
         self._place = []
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
-        if m[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
+            for i in range(3):
+                if m[x][y] != "~":
+                    return False
+                x += -1
             if x < 3:
                 return False
             else:
@@ -421,6 +520,10 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     x += -1
         elif direction == 2:
+            for i in range(3):
+                if m[x][y] != "~":
+                    return False
+                y += 1
             if y >= 8:
                 return False
             else:
@@ -428,6 +531,10 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     y += 1
         elif direction == 3:
+            for i in range(3):
+                if m[x][y] != "~":
+                    return False
+                x += 1
             if x >= 8:
                 return False
             else:
@@ -435,6 +542,10 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     x += 1
         elif direction == 4:
+            for i in range(3):
+                if m[x][y] != "~":
+                    return False
+                y += -1
             if y < 3:
                 return False
             else:
@@ -442,6 +553,7 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
 
@@ -451,22 +563,28 @@ class croiseurBot:
     def __init__(self, pv, place):
         self._pv = 80
         self._place = []
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
-        if m[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
+            for i in range(4):
+                if m[x][y] != "~":
+                    return False
+                x += -1
             if x < 4:
                 return False
             else:
@@ -474,13 +592,21 @@ class croiseurBot:
                     m[x][y] = "▧"
                     x += -1
         elif direction == 2:
+            for i in range(4):
+                if m[x][y] != "~":
+                    return False
+                y += 1
             if y >= 7:
                 return False
             else:
                 for i in range(4):
                     m[x][y] = "▧"
-                    y += 1
+                    x += 1
         elif direction == 3:
+            for i in range(4):
+                if m[x][y] != "~":
+                    return False
+                x += 1
             if x >= 7:
                 return False
             else:
@@ -488,6 +614,10 @@ class croiseurBot:
                     m[x][y] = "▧"
                     x += 1
         elif direction == 4:
+            for i in range(4):
+                if m[x][y] != "~":
+                    return False
+                y += -1
             if y < 4:
                 return False
             else:
@@ -495,6 +625,7 @@ class croiseurBot:
                     m[x][y] = "▧"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
 
@@ -504,22 +635,28 @@ class porteavionsBot:
     def __init__(self, pv, place):
         self._pv = 100
         self._place = []
+
     def getPv():
         return self._pv
+
     def setPv(pv):
         self._pv = pv
+
     def getPlace(self):
         return self._place
+
     def setPlace(x, y, direction):
-        if m[x][y] != "~":
-            return False
-        elif x > 10 or x < 1:
+        if x > 10 or x < 1:
             return False
         elif y > 10 or y < 1:
             return False
         elif direction < 1 or direction > 4:
             return False
         elif direction == 1:
+            for i in range(5):
+                if m[x][y] != "~":
+                    return False
+                x += -1
             if x < 5:
                 return False
             else:
@@ -527,6 +664,10 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     x += -1
         elif direction == 2:
+            for i in range(5):
+                if m[x][y] != "~":
+                    return False
+                y += 1
             if y >= 6:
                 return False
             else:
@@ -534,6 +675,10 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     y += 1
         elif direction == 3:
+            for i in range(5):
+                if m[x][y] != "~":
+                    return False
+                x += 1
             if x >= 6:
                 return False
             else:
@@ -541,6 +686,10 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     x += 1
         elif direction == 4:
+            for i in range(5):
+                if m[x][y] != "~":
+                    return False
+                y += -1
             if y < 5:
                 return False
             else:
@@ -548,5 +697,6 @@ class porteavionsBot:
                     m[x][y] = "▨"
                     y += -1
         return ""
+
     def coule():
         self._coule = True
