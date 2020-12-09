@@ -11,7 +11,7 @@ from tab import *
 # Classe du topilleur de l'utilisateur
 class torpilleurUser:
     # On definit les accesseurs et les mutateurs
-    def __init__(self, pv, place):
+    def __init__(self, pv, place, coule):
         self._pv = 40
         self._place = []
         self._coule = False
@@ -58,7 +58,9 @@ class torpilleurUser:
                     l[x][y] = "▤"
                     y += -1
         return ""
-    def coule():
+    def getCoule(self):
+        return self._coule
+    def setCoule(self):
         self._coule = True
 
 # Classe du sous-marin de l'utilisateur:
@@ -133,7 +135,9 @@ class sousmarinUser:
                     l[x][y] = "▥"
                     y += -1
         return ""
-    def coule():
+    def getCoule(self):
+        return self._coule
+    def setCoule(self):
         self._coule = True
 
 
@@ -209,7 +213,9 @@ class contretorpilleurUser:
                     l[x][y] = "▦"
                     y += -1
         return ""
-    def coule():
+    def getCoule(self):
+        return self._coule
+    def setCoule(self):
         self._coule = True
 
 
@@ -293,7 +299,9 @@ class croiseurUser:
                     l[x][y] = "▧"
                     y += -1
         return ""
-    def coule():
+    def getCoule(self):
+        return self._coule
+    def setCoule(self):
         self._coule = True
 
 
@@ -385,7 +393,9 @@ class porteavionsUser:
                     l[x][y] = "▨"
                     y += -1
         return ""
-    def coule():
+    def getCoule(self):
+        return self._coule
+    def setCoule(self):
         self._coule = True
 
 
@@ -441,7 +451,9 @@ class torpilleurBot:
                     m[x][y] = "▤"
                     y += -1
         return ""
-    def coule():
+    def getCoule(self):
+        return self._coule
+    def setCoule(self):
         self._coule = True
 
 
@@ -519,7 +531,9 @@ class sousmarinBot:
                     m[x][y] = "▥"
                     y += -1
         return ""
-    def coule():
+    def getCoule(self):
+        return self._coule
+    def setCoule(self):
         self._coule = True
 
 
@@ -597,7 +611,9 @@ class contretorpilleurBot:
                     m[x][y] = "▦"
                     y += -1
         return ""
-    def coule():
+    def getCoule(self):
+        return self._coule
+    def setCoule():
         self._coule = True
 
 
@@ -683,7 +699,9 @@ class croiseurBot:
                     m[x][y] = "▧"
                     y += -1
         return ""
-    def coule():
+    def getCoule(self):
+        return self._coule
+    def setCoule(self):
         self._coule = True
 
 
@@ -783,9 +801,9 @@ class porteavionsBot:
         self._coule = True
 
 def isAliveUser():
-    if torpilleurUser.coule() and sousmarinUser.coule() and contretorpilleurUser.coule() and croiseurUser.coule() and porteavionsUser.coule() == True:
+    if torpilleurUser.setCoule(torpilleurUser) and sousmarinUser.setCoule(sousmarinUser) and contretorpilleurUser.setCoule(contretorpilleurUser) and croiseurUser.setCoule(croiseurUser) and porteavionsUser.setCoule(porteavionsUser) == True:
         return False
 
 def isAliveBot():
-     if torpilleurBot.coule() and sousmarinBot.coule() and contretorpilleurBot.coule() and croiseurBot.coule() and porteavionsBot.coule() == True:
+     if torpilleurBot.setCoule(torpilleurBot) and sousmarinBot.setCoule(sousmarinBot) and contretorpilleurBot.setCoule(contretorpilleurBot) and croiseurBot.setCoule(croiseurBot) and porteavionsBot.setCoule(porteavionsBot) == True:
          return False

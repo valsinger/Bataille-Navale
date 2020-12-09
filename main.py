@@ -195,6 +195,8 @@ while porteavionsUser.setPlace(x, y, direction) == False:
 
 print(tab(l))
 
-print(isAliveUser())
+while isAliveBot() != True and isAliveUser() != True:
+    attaqueUser(x, y)
+    attaqueBot(x, y)
 
 

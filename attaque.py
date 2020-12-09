@@ -15,7 +15,7 @@ def attaqueUser(x, y):
             print("Touché !")
         else:
             # Si le bateau touché n'a que 20pv, cela veut dire que si on lui met un coup, il coule, donc on utilise directement la fonction .coule()
-            torpilleurBot.coule()
+            torpilleurBot.setCoule(torpilleurBot)
             # On modifie le caractère touché du bateau par une croix sur les tableaux m et p
             m[x][y] = "x"
             p[x][y] = "x"
@@ -27,7 +27,7 @@ def attaqueUser(x, y):
             p[x][y] = "x"
             print("Touché !")
         else:
-            sousmarinBot.coule()
+            sousmarinBot.setCoule(sousmarinBot)
             m[x][y] = "x"
             p[x][y] = "x"
             print("Coulé !")
@@ -38,7 +38,7 @@ def attaqueUser(x, y):
             p[x][y] = "x"
             print("Touché !")
         else:
-            contretorpilleurBot.coule()
+            contretorpilleurBot.setCoule(contretorpilleurBot)
             m[x][y] = "x"
             p[x][y] = "x"
             print("Coulé !")
@@ -49,7 +49,7 @@ def attaqueUser(x, y):
             p[x][y] = "x"
             print("Touché !")
         else:
-            croiseurBot.coule()
+            croiseurBot.setCoule(croiseurBot)
             m[x][y] = "x"
             p[x][y] = "x"
             print("Coulé !")
@@ -60,7 +60,7 @@ def attaqueUser(x, y):
             p[x][y] = "x"
             print("Touché !")
         else:
-            porteavionsBot.coule()
+            porteavionsBot.setCoule(porteavionsBot)
             m[x][y] = "x"
             p[x][y] = "x"
             print("Coulé !")
